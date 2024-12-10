@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="461.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accountantandsalesmanager.SchedeuleMeetingViewController">
+<AnchorPane fx:id="selectionleadClientComboBox" prefHeight="461.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accountantandsalesmanager.SchedeuleMeetingViewController">
    <children>
       <Label layoutX="14.0" layoutY="14.0" text="Schedeule Meeting:">
          <font>
@@ -18,16 +17,16 @@
          </font>
       </Label>
       <ComboBox layoutX="125.0" layoutY="60.0" prefWidth="150.0" />
-      <Button layoutX="11.0" layoutY="102.0" mnemonicParsing="false" text="Save Meeting" />
-      <TableView layoutY="172.0" prefHeight="200.0" prefWidth="600.0">
+      <Button layoutX="11.0" layoutY="102.0" mnemonicParsing="false" onAction="#saveMeetingButtonOnAction" text="Save Meeting" />
+      <TableView fx:id="shedulemeetingTableView" layoutY="172.0" prefHeight="200.0" prefWidth="600.0">
         <columns>
-          <TableColumn prefWidth="213.33328247070312" text="Client Name" />
-          <TableColumn prefWidth="226.00006103515625" text="Date" />
-            <TableColumn prefWidth="160.0" text="Time" />
+          <TableColumn fx:id="clientNameTableColumn" prefWidth="213.33328247070312" text="Client Name" />
+          <TableColumn fx:id="dateTableColumn" prefWidth="226.00006103515625" text="Date" />
+            <TableColumn fx:id="timeTableColumn" prefWidth="160.0" text="Time" />
         </columns>
       </TableView>
       <Label layoutX="14.0" layoutY="64.0" text="Select Lead/Client:" />
-      <DatePicker layoutX="313.0" layoutY="60.0" />
+      <DatePicker fx:id="dateDatepicker" layoutX="313.0" layoutY="60.0" />
       <Label layoutX="510.0" layoutY="64.0" text="Time" />
    </children>
 </AnchorPane>

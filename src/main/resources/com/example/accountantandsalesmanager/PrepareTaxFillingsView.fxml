@@ -17,22 +17,22 @@
          </font>
       </Label>
       <Label layoutX="14.0" layoutY="69.0" text="Tax Management:" />
-      <ComboBox layoutX="84.0" layoutY="114.0" prefWidth="150.0" />
-      <Button layoutX="-4.0" layoutY="215.0" mnemonicParsing="false" text="Add Filling Data" />
+      <ComboBox fx:id="taxTypeComboBox" layoutX="84.0" layoutY="114.0" prefWidth="150.0" />
+      <Button layoutX="-4.0" layoutY="215.0" mnemonicParsing="false" onAction="#addFillingDataButtonOnAction" text="Add Filling Data" />
       <Label layoutX="14.0" layoutY="118.0" text="Tax Type:" />
       <Label layoutX="14.0" layoutY="155.0" text="Date Range:" />
-      <DatePicker layoutX="84.0" layoutY="151.0" />
+      <DatePicker fx:id="startDatePicker" layoutX="84.0" layoutY="151.0" />
       <Label layoutX="288.0" layoutY="155.0" text="to" />
-      <DatePicker layoutX="334.0" layoutY="151.0" />
-      <Button layoutX="137.0" layoutY="215.0" mnemonicParsing="false" text="Submit Filling" />
-      <TableView layoutY="261.0" prefHeight="200.0" prefWidth="601.0">
+      <DatePicker fx:id="endDatePicker" layoutX="334.0" layoutY="151.0" />
+      <Button layoutX="137.0" layoutY="215.0" mnemonicParsing="false" onAction="#submitFillingButtonOnAction" text="Submit Filling" />
+      <TableView layoutY="262.0" onSort="#prepareTaxfillingsTableView" prefHeight="200.0" prefWidth="646.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="FIlling ID" />
-          <TableColumn prefWidth="75.0" text="Tax Type" />
-            <TableColumn prefWidth="75.0" text="Submission Date" />
-            <TableColumn prefWidth="75.0" text="Due Date" />
-            <TableColumn prefWidth="75.0" text="Status" />
-            <TableColumn prefWidth="223.3333638509115" text="Action (Button for detailed view/edit per row)." />
+          <TableColumn fx:id="fillingIdTableColumn" prefWidth="75.0" text="FIlling ID" />
+          <TableColumn fx:id="taxTypeTableColumn" prefWidth="75.0" text="Tax Type" />
+            <TableColumn fx:id="submissionDateTableColumn" prefWidth="127.33335876464844" text="Submission Date" />
+            <TableColumn fx:id="dueDateTableColumn" prefWidth="81.33331298828125" text="Due Date" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="127.3333740234375" text="Status" />
+            <TableColumn fx:id="actionButtonTableColumn" prefWidth="155.99996948242188" text="Action (Button for detailed view/edit per row)." />
         </columns>
       </TableView>
    </children>

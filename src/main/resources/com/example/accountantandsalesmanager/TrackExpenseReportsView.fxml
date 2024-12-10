@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="491.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accountantandsalesmanager.TrackExpenseReportsViewController">
    <children>
       <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="348.0" text="Track Expense Reports">
@@ -18,21 +17,21 @@
          </font>
       </Label>
       <Label layoutX="14.0" layoutY="56.0" text="Expense Management:" />
-      <ComboBox layoutX="170.0" layoutY="88.0" prefWidth="150.0" />
-      <TextField layoutX="170.0" layoutY="52.0" />
+      <ComboBox fx:id="departmentorProjectComboBox" layoutX="170.0" layoutY="88.0" prefWidth="150.0" />
+      <TextField fx:id="expenseManagementTextField" layoutX="170.0" layoutY="52.0" />
       <Label layoutX="14.0" layoutY="92.0" text="Select Department/Project:" />
-      <TableView layoutY="197.0" prefHeight="209.0" prefWidth="642.0">
+      <TableView fx:id="trackExpenseReportsTableView" layoutY="197.0" prefHeight="209.0" prefWidth="642.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Report ID" />
-          <TableColumn prefWidth="81.99999237060547" text="Department" />
-            <TableColumn prefWidth="91.99996948242188" text="Submitted by" />
-            <TableColumn prefWidth="104.00001525878906" text="Submission Date" />
-            <TableColumn prefWidth="106.0" text="Total Amount" />
-            <TableColumn prefWidth="71.99996948242188" text="Status" />
-            <TableColumn prefWidth="112.0" text="Action Buttons" />
+          <TableColumn fx:id="reportIdTableColumn" prefWidth="75.0" text="Report ID" />
+          <TableColumn fx:id="departmentTableColumn" prefWidth="81.99999237060547" text="Department" />
+            <TableColumn fx:id="submittedbyTableColumn" prefWidth="91.99996948242188" text="Submitted by" />
+            <TableColumn fx:id="submissionDateTableColumn" prefWidth="104.00001525878906" text="Submission Date" />
+            <TableColumn fx:id="totalAmmountTableColumn" prefWidth="106.0" text="Total Amount" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="71.99996948242188" text="Status" />
+            <TableColumn fx:id="actionButtonTableColumn" prefWidth="112.0" text="Action Buttons" />
         </columns>
       </TableView>
-      <Button layoutX="14.0" layoutY="425.0" mnemonicParsing="false" text="Export " />
-      <Button layoutX="23.0" layoutY="157.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="591.0" text="Export " />
+      <Button layoutX="14.0" layoutY="425.0" mnemonicParsing="false" onAction="#exportButtonOnAction" text="Export " />
+      <Button layoutX="23.0" layoutY="157.0" mnemonicParsing="false" onAction="#showTablViewOfTrackEXpenseButtonOnAction" prefHeight="25.0" prefWidth="591.0" text="Export " />
    </children>
 </AnchorPane>

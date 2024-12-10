@@ -12,27 +12,27 @@
 
 <AnchorPane prefHeight="579.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accountantandsalesmanager.ReconcileBankAccountsViewController">
    <children>
-      <ComboBox layoutX="116.0" layoutY="57.0" prefWidth="150.0" />
+      <ComboBox fx:id="bankAccountComboBox" layoutX="116.0" layoutY="57.0" prefWidth="150.0" />
       <Label layoutX="14.0" layoutY="61.0" text="Bank Account:" />
       <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="310.0" text="Reconcile Bank Accounts">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <TableView layoutY="333.0" prefHeight="200.0" prefWidth="625.0">
+      <TableView fx:id="reconcileBankAccountsTableView" layoutY="333.0" prefHeight="200.0" prefWidth="625.0">
         <columns>
-          <TableColumn prefWidth="113.3333410024643" text="Date" />
-          <TableColumn prefWidth="179.33330535888672" text="Description" />
-            <TableColumn prefWidth="185.3333740234375" text="Amount" />
-            <TableColumn prefWidth="146.00003051757812" text="Status" />
+          <TableColumn onEditStart="#dateTableColumn" prefWidth="113.3333410024643" text="Date" />
+          <TableColumn fx:id="descriptionTableColumn" prefWidth="179.33330535888672" text="Description" />
+            <TableColumn fx:id="amountTableColumn" prefWidth="185.3333740234375" text="Amount" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="146.00003051757812" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="14.0" layoutY="227.0" mnemonicParsing="false" text="Update and Save" />
-      <Button layoutX="207.0" layoutY="290.0" mnemonicParsing="false" text="Show history Bank Transaction" />
-      <DatePicker layoutX="191.0" layoutY="109.0" />
+      <Button layoutX="14.0" layoutY="227.0" mnemonicParsing="false" onAction="#updateAndSaveButtonOnAction" text="Update and Save" />
+      <Button layoutX="207.0" layoutY="290.0" mnemonicParsing="false" onAction="#showTableViewOfHistoryTransactionButtonOnAction" text="Show history Bank Transaction" />
+      <DatePicker fx:id="bankStatementDatePicker" layoutX="191.0" layoutY="109.0" />
       <Label layoutX="14.0" layoutY="113.0" text="Date of the Bank Statements:" />
       <Label layoutX="14.0" layoutY="168.0" text="Transaction ID:" />
-      <TextField layoutX="117.0" layoutY="164.0" />
-      <Button layoutX="14.0" layoutY="264.0" mnemonicParsing="false" text="Reconcile Transaction" />
+      <TextField fx:id="transactionIdTextField" layoutX="117.0" layoutY="164.0" />
+      <Button layoutX="14.0" layoutY="264.0" mnemonicParsing="false" onAction="#reconcileTransactionButtonOnAction" text="Reconcile Transaction" />
    </children>
 </AnchorPane>

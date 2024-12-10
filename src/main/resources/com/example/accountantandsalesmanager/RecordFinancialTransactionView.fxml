@@ -21,23 +21,23 @@
       <Label layoutX="285.0" layoutY="98.0" text="Amount(BDT):" />
       <Label layoutX="285.0" layoutY="153.0" text="Description:" />
       <Label layoutX="14.0" layoutY="202.0" text="Transaction Date:" />
-      <Button layoutX="378.0" layoutY="198.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="157.0" text="Save" />
-      <TextField layoutX="378.0" layoutY="94.0" />
-      <TextField layoutX="378.0" layoutY="149.0" />
-      <ComboBox layoutX="109.0" layoutY="94.0" prefWidth="150.0" />
-      <DatePicker layoutX="110.0" layoutY="198.0" />
+      <Button layoutX="378.0" layoutY="198.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="25.0" prefWidth="157.0" text="Save" />
+      <TextField fx:id="amountTextField" layoutX="378.0" layoutY="94.0" />
+      <TextField fx:id="descriptionTextField" layoutX="378.0" layoutY="149.0" />
+      <ComboBox fx:id="transactionTypeComboBox" layoutX="109.0" layoutY="94.0" prefWidth="150.0" />
+      <DatePicker fx:id="transactionDatePicker" layoutX="110.0" layoutY="198.0" />
       <Label layoutX="12.0" layoutY="153.0" text="Payment Method:" />
-      <ComboBox layoutX="109.0" layoutY="149.0" prefWidth="150.0" />
-      <TableView layoutX="-1.0" layoutY="319.0" prefHeight="211.0" prefWidth="664.0">
+      <ComboBox fx:id="paymentMethodComboBox" layoutX="109.0" layoutY="149.0" prefWidth="150.0" />
+      <TableView fx:id="financialTransaxtionTableView" layoutX="-1.0" layoutY="319.0" prefHeight="211.0" prefWidth="664.0">
         <columns>
-          <TableColumn prefWidth="128.66665136814117" text="Transaction Type" />
-            <TableColumn prefWidth="146.6666717529297" text="Description" />
-          <TableColumn prefWidth="126.0" text="Amount" />
-            <TableColumn prefWidth="126.66667175292969" text="Payment Method" />
-            <TableColumn prefWidth="134.66668701171875" text="Transaction Date" />
+          <TableColumn fx:id="transactionTypeTableColumn" prefWidth="128.66665136814117" text="Transaction Type" />
+            <TableColumn fx:id="descriptionTableColumn" prefWidth="146.6666717529297" text="Description" />
+          <TableColumn fx:id="amountTableColumn" prefWidth="126.0" text="Amount" />
+            <TableColumn fx:id="paymentMethodTableColumn" prefWidth="126.66667175292969" text="Payment Method" />
+            <TableColumn fx:id="transactionDateTableColumn" prefWidth="134.66668701171875" text="Transaction Date" />
         </columns>
       </TableView>
-      <Button layoutX="16.0" layoutY="274.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="600.0" text="Show  Transaction History " textFill="#160d0d">
+      <Button layoutX="16.0" layoutY="274.0" mnemonicParsing="false" onAction="#showTableViewTransactionHistoryButtonOnAction" prefHeight="25.0" prefWidth="600.0" text="Show  Transaction History " textFill="#160d0d">
          <font>
             <Font name="System Italic" size="18.0" />
          </font>

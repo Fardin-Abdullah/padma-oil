@@ -16,20 +16,20 @@
          </font>
       </Label>
       <Label layoutX="14.0" layoutY="70.0" text="Time Range:" />
-      <DatePicker layoutX="91.0" layoutY="66.0" />
+      <DatePicker fx:id="startDatePicker" layoutX="91.0" layoutY="66.0" />
       <Label layoutX="288.0" layoutY="70.0" text="to" />
-      <DatePicker layoutX="323.0" layoutY="66.0" />
-      <Button layoutX="14.0" layoutY="114.0" mnemonicParsing="false" text="Fetch Cash Flow Data" />
-      <TableView layoutY="182.0" prefHeight="255.0" prefWidth="600.0">
+      <DatePicker fx:id="endDatePicker" layoutX="323.0" layoutY="66.0" />
+      <Button layoutX="14.0" layoutY="114.0" mnemonicParsing="false" onAction="#fetchCashflowButtonOnAction" text="Fetch Cash Flow Data" />
+      <TableView fx:id="monitorCashFlowTableView" layoutY="182.0" prefHeight="255.0" prefWidth="600.0">
         <columns>
-          <TableColumn prefWidth="97.33331298828125" text="Transaction ID" />
-          <TableColumn prefWidth="74.00003051757812" text="Date" />
-            <TableColumn prefWidth="104.0" text="Description" />
-            <TableColumn prefWidth="100.0" text="Amount" />
-            <TableColumn prefWidth="107.33331298828125" text="Type" />
-            <TableColumn prefWidth="119.3333740234375" text="Category" />
+          <TableColumn fx:id="transactionIdTableColumn" prefWidth="97.33331298828125" text="Transaction ID" />
+          <TableColumn fx:id="transactionDateTableColumn" prefWidth="74.00003051757812" text="Date" />
+            <TableColumn fx:id="descriptionTableColumn" prefWidth="104.0" text="Description" />
+            <TableColumn fx:id="amountTableColumn" prefWidth="100.0" text="Amount" />
+            <TableColumn fx:id="typeTableColumn" prefWidth="107.33331298828125" text="Type" />
+            <TableColumn fx:id="categoryTableColumn" prefWidth="119.3333740234375" text="Category" />
         </columns>
       </TableView>
-      <Button layoutX="7.0" layoutY="446.0" mnemonicParsing="false" text="Export Data" />
+      <Button layoutX="7.0" layoutY="446.0" mnemonicParsing="false" onAction="#exportDataButtonOnAction" text="Export Data" />
    </children>
 </AnchorPane>
