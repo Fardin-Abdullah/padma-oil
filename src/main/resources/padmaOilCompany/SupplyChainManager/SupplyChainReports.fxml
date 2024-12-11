@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="615.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.supplyChainManager.SupplyChainReportsController">
+   <children>
+      <Label layoutX="185.0" layoutY="14.0" prefHeight="75.0" prefWidth="308.0" text="Supply Chain Reports">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="134.0" layoutY="89.0" prefHeight="53.0" prefWidth="171.0" text="Select Reporting Period">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="314.0" layoutY="103.0" onAction="#alu" prefWidth="150.0" />
+      <Label layoutX="281.0" layoutY="142.0" prefHeight="37.0" prefWidth="117.0" text="Reporting Period">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="197.0" prefHeight="37.0" prefWidth="117.0" text="Starting Period">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="248.0" prefHeight="37.0" prefWidth="117.0" text="Ending Period">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="352.0" prefHeight="37.0" prefWidth="181.0" text="Generate Detailed Report ">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="208.0" layoutY="203.0" />
+      <DatePicker layoutX="208.0" layoutY="254.0" />
+      <Button layoutX="479.0" layoutY="208.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="129.0" text="Select and Process">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <TableView layoutX="27.0" layoutY="396.0" prefHeight="187.0" prefWidth="636.0">
+        <columns>
+          <TableColumn prefWidth="172.0" text="Shipment Performance" />
+          <TableColumn prefWidth="143.0" text="Inventory Levels" />
+            <TableColumn prefWidth="145.0" text="Supplier Performance" />
+            <TableColumn prefWidth="175.0" text="Delivery Timelines" />
+        </columns>
+      </TableView>
+      <Button layoutX="527.0" layoutY="346.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="136.0" text="Generate Report">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

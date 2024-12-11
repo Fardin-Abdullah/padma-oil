@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMouseClicked="#jhvyh" prefHeight="540.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.supplyChainManager.HandleDeliveryIssuesController">
+   <children>
+      <Label layoutX="209.0" layoutY="14.0" prefHeight="59.0" prefWidth="268.0" text="Report Delivery Issues.">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="24.0" layoutY="67.0" mnemonicParsing="false" text="Show Delay Delivery" />
+      <TableView layoutX="24.0" layoutY="100.0" prefHeight="112.0" prefWidth="654.0">
+        <columns>
+          <TableColumn prefWidth="150.0" text="Shipment ID" />
+            <TableColumn prefWidth="145.0" text="Delivery Status" />
+            <TableColumn prefWidth="163.0" text="Destination " />
+            <TableColumn prefWidth="193.0" text="Scheduled Delivery" />
+        </columns>
+      </TableView>
+      <Label layoutX="31.0" layoutY="218.0" prefHeight="33.0" prefWidth="96.0" text="Shipment ID">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="sfdvc" layoutX="118.0" layoutY="222.0" prefWidth="150.0" />
+      <Label layoutX="31.0" layoutY="261.0" prefHeight="33.0" prefWidth="84.0" text="Issue Type:">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="scx" layoutX="115.0" layoutY="265.0" prefWidth="150.0" />
+      <Label layoutX="31.0" layoutY="294.0" prefHeight="33.0" prefWidth="84.0" text="Description:">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="119.0" layoutY="298.0" prefHeight="172.0" prefWidth="546.0" />
+      <Button layoutX="497.0" layoutY="489.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="156.0" text="Submit Issue Resolution" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="528.0" prefWidth="671.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.EnsureProductQualityComplianceController">
+   <children>
+      <Label layoutX="135.0" layoutY="107.0" prefHeight="55.0" prefWidth="112.0" text="Product Batch-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="247.0" layoutY="122.0" prefWidth="150.0" />
+      <Label layoutX="194.0" layoutY="35.0" prefHeight="55.0" prefWidth="406.0" text="Product Quality Section" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="201.0" prefHeight="32.0" prefWidth="104.0" text="Quality Test  -">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="175.0" />
+      <Label layoutX="161.0" layoutY="196.0" prefHeight="42.0" prefWidth="307.0" style="-fx-background-color: silver;" />
+      <Button layoutX="444.0" layoutY="119.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="104.0" text="Check Result">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="496.0" layoutY="196.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="118.0" text="Save Result">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="22.0" layoutY="288.0" mnemonicParsing="false" text="View All Result">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <TableView layoutX="22.0" layoutY="322.0" prefHeight="172.0" prefWidth="633.0">
+        <columns>
+          <TableColumn prefWidth="139.0" text="Viscosity" />
+            <TableColumn prefWidth="281.0" text="Density" />
+            <TableColumn prefWidth="210.0" text="Purity" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
