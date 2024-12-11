@@ -58,6 +58,6 @@
       <TextField fx:id="toTextfield" layoutX="123.0" layoutY="338.0" />
       <TextField fx:id="fromTextField" layoutX="123.0" layoutY="368.0" />
       <TextField layoutX="123.0" layoutY="396.0" prefHeight="143.0" prefWidth="429.0" />
-      <Button layoutX="566.0" layoutY="396.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="83.0" text="Send" />
+      <Button layoutX="566.0" layoutY="396.0" mnemonicParsing="false" onAction="#sendButtonOnAction" prefHeight="38.0" prefWidth="83.0" text="Send" />
    </children>
 </AnchorPane>

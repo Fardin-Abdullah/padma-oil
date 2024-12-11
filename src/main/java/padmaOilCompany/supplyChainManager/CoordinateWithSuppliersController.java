@@ -12,4 +12,9 @@ public class CoordinateWithSuppliersController
 
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void sendButtonOnAction(ActionEvent actionEvent) {
+    }
+}
