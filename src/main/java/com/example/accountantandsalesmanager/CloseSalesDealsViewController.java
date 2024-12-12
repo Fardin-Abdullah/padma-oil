@@ -1,5 +1,7 @@
 package com.example.accountantandsalesmanager;
 
+import javafx.scene.control.ComboBox;
+
 public class CloseSalesDealsViewController
 {
     @javafx.fxml.FXML

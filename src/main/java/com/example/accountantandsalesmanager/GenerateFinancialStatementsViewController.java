@@ -1,5 +1,10 @@
 package com.example.accountantandsalesmanager;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableView;
+
 public class GenerateFinancialStatementsViewController
 {
     @javafx.fxml.FXML

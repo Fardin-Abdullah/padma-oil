@@ -1,5 +1,9 @@
 package com.example.accountantandsalesmanager;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
 public class AnalyzeSalesPerformanceViewController
 {
     @javafx.fxml.FXML

@@ -1,5 +1,10 @@
 package com.example.accountantandsalesmanager;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+
 public class GenerateSalesLeadViewController
 {
     @javafx.fxml.FXML

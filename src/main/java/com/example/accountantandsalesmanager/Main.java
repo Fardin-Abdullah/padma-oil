@@ -11,13 +11,15 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("PadmaOilCompanyDashboardView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene firstscene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Hello!");
-        stage.setScene(scene);
+        stage.setScene(firstscene);
         stage.show();
     }
 
     public static void main(String[] args) {
+
+        //start(..);
         launch();
     }
 }
