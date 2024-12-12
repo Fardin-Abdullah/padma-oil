@@ -1,5 +1,8 @@
 package com.example.accountantandsalesmanager;
 
+import javafx.event.ActionEvent;
+import javafx.scene.layout.AnchorPane;
+
 public class SalesManagerDashboardViewController
 {
     @javafx.fxml.FXML
