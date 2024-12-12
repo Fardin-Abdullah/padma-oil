@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="508.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.supplyChainManager.OptimizeSupplyChainRoutesController">
    <children>
       <Label layoutX="51.0" layoutY="63.0" prefHeight="25.0" prefWidth="108.0" text="Select Shipment:">
@@ -17,18 +16,18 @@
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="212.0" layoutY="14.0" text=" Route Optimization">
+      <Label fx:id="selectShipmentOptimizationComboBox" layoutX="212.0" layoutY="14.0" text=" Route Optimization" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
       <ComboBox layoutX="159.0" layoutY="63.0" prefWidth="150.0" />
-      <TableView layoutX="14.0" layoutY="96.0" prefHeight="139.0" prefWidth="697.0">
+      <TableView fx:id="routeOptimizationTableView" layoutX="10.0" layoutY="96.0" prefHeight="139.0" prefWidth="697.0">
         <columns>
-          <TableColumn prefWidth="146.0" text="Shipment ID" />
-          <TableColumn prefWidth="208.0" text="Current Status " />
-            <TableColumn prefWidth="167.0" text=" Destination" />
-            <TableColumn prefWidth="173.0" text="Estimated Delivery" />
+          <TableColumn fx:id="shipmentIdOptimizationTableColm" prefWidth="146.0" text="Shipment ID" />
+          <TableColumn fx:id="currentStatusOptimizationTableColumn" prefWidth="208.0" text="Current Status " />
+            <TableColumn fx:id="destinationOptimizationTableColum" prefWidth="167.0" text=" Destination" />
+            <TableColumn fx:id="estimatedDeliveryOptimizationTableColumn" prefWidth="173.0" text="Estimated Delivery" />
         </columns>
       </TableView>
       <Label layoutX="30.0" layoutY="242.0" prefHeight="25.0" prefWidth="108.0" text="Input details">
@@ -51,19 +50,19 @@
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <ComboBox layoutX="128.0" layoutY="267.0" prefWidth="150.0" />
-      <ComboBox layoutX="128.0" layoutY="298.0" prefWidth="150.0" />
-      <DatePicker layoutX="125.0" layoutY="333.0" />
-      <TableView layoutX="10.0" layoutY="376.0" prefHeight="128.0" prefWidth="697.0">
+      <ComboBox fx:id="routeFromComboBox" layoutX="128.0" layoutY="267.0" prefWidth="150.0" />
+      <ComboBox fx:id="routeToComboBox" layoutX="128.0" layoutY="298.0" prefWidth="150.0" />
+      <DatePicker fx:id="estimatedTimeOptimizationDatePickef" layoutX="125.0" layoutY="333.0" />
+      <TableView fx:id="optimizationRouteTableView" layoutX="10.0" layoutY="376.0" prefHeight="128.0" prefWidth="697.0">
          <columns>
-            <TableColumn prefWidth="146.0" text="Optimized Route From" />
-            <TableColumn prefWidth="194.0" text="Optimized Route To" />
-            <TableColumn prefWidth="136.0" text="Distance" />
-            <TableColumn prefWidth="218.0" text="Estimated Cost" />
+            <TableColumn fx:id="routeFromOptimizationTableColumn" prefWidth="146.0" text="Optimized Route From" />
+            <TableColumn fx:id="routeToOptimizationTableColumn" prefWidth="194.0" text="Optimized Route To" />
+            <TableColumn fx:id="distanceOptimizationTableColumn" prefWidth="136.0" text="Distance" />
+            <TableColumn fx:id="extimatedCostOptimizationTableColumn" prefWidth="218.0" text="Estimated Cost" />
          </columns>
       </TableView>
-      <Button layoutX="610.0" layoutY="333.0" mnemonicParsing="false" text="Search route" />
-      <Button layoutX="350.0" layoutY="267.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="140.0" text="Confirm ">
+      <Button layoutX="610.0" layoutY="333.0" mnemonicParsing="false" onAction="#searchRouteButtonOnAction" text="Search route" />
+      <Button layoutX="350.0" layoutY="267.0" mnemonicParsing="false" onAction="#confirmOptimizationButtonOnAction" prefHeight="86.0" prefWidth="140.0" text="Confirm ">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

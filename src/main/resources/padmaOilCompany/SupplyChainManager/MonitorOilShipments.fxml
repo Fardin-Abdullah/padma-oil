@@ -20,8 +20,8 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="enterShipmentId" layoutX="169.0" layoutY="80.0" />
-      <Button layoutX="340.0" layoutY="80.0" mnemonicParsing="false" onAction="#checkOnActionButton" prefHeight="25.0" prefWidth="65.0" text="Check" />
+      <TextField fx:id="shipmentIdTextField" layoutX="169.0" layoutY="80.0" />
+      <Button layoutX="340.0" layoutY="80.0" mnemonicParsing="false" onAction="#checkButtonOnAction" prefHeight="25.0" prefWidth="65.0" text="Check" />
       <Label layoutX="37.0" layoutY="125.0" prefHeight="35.0" prefWidth="132.0" text="Shipment Details ">
          <font>
             <Font name="System Bold" size="13.0" />
@@ -32,23 +32,23 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TableView layoutX="37.0" layoutY="160.0" prefHeight="91.0" prefWidth="629.0">
+      <TableView fx:id="shipmentDetailsTableView" layoutX="37.0" layoutY="160.0" prefHeight="91.0" prefWidth="629.0">
         <columns>
-          <TableColumn prefWidth="149.0" text="Shipment ID" />
-          <TableColumn prefWidth="152.0" text="Status:" />
-            <TableColumn prefWidth="152.0" text="Last Known Location" />
-            <TableColumn prefWidth="175.0" text="Estimated Delivery:" />
+          <TableColumn fx:id="shipmentIdTableColumn" prefWidth="149.0" text="Shipment ID" />
+          <TableColumn fx:id="statusTableColumn" prefWidth="152.0" text="Status:" />
+            <TableColumn fx:id="lastKnownLocationTableColumn" prefWidth="152.0" text="Last Known Location" />
+            <TableColumn fx:id="estimatedDeliveryTableColumn" prefWidth="175.0" text="Estimated Delivery:" />
         </columns>
       </TableView>
-      <TableView layoutX="37.0" layoutY="327.0" prefHeight="91.0" prefWidth="629.0">
+      <TableView fx:id="shipmentStatusSectionTableView" layoutX="37.0" layoutY="327.0" prefHeight="91.0" prefWidth="629.0">
          <columns>
-            <TableColumn prefWidth="149.0" text="Shipment ID" />
-            <TableColumn prefWidth="152.0" text="Current Status:" />
-            <TableColumn prefWidth="152.0" text=" Location" />
-            <TableColumn prefWidth="175.0" text="Estimated Delivery:" />
+            <TableColumn fx:id="shipmentIdStatusTableColumn" prefWidth="149.0" text="Shipment ID" />
+            <TableColumn fx:id="currentStatusStatusTableColumn" prefWidth="152.0" text="Current Status:" />
+            <TableColumn fx:id="locationStatusTableColumn" prefWidth="152.0" text=" Location" />
+            <TableColumn fx:id="estimatedDeliveryStatusTableColumn" prefWidth="175.0" text="Estimated Delivery:" />
          </columns>
       </TableView>
-      <Button layoutX="589.0" layoutY="118.0" mnemonicParsing="false" text="Refresh" />
-      <Button layoutX="559.0" layoutY="298.0" mnemonicParsing="false" text="Live Data Update" />
+      <Button layoutX="589.0" layoutY="118.0" mnemonicParsing="false" onAction="#refreshButtonOnAction" text="Refresh" />
+      <Button layoutX="559.0" layoutY="298.0" mnemonicParsing="false" onAction="#liveDataUpdateButtonOnAction" text="Live Data Update" />
    </children>
 </AnchorPane>

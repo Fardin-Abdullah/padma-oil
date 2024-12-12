@@ -9,50 +9,64 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="564.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.ReviewProductionSpecificationsController">
    <children>
-      <Label layoutX="226.0" layoutY="47.0" prefHeight="63.0" prefWidth="289.0" text="Review Product" textAlignment="CENTER">
+      <Label layoutX="204.0" layoutY="2.0" prefHeight="63.0" prefWidth="289.0" text="Review Product" textAlignment="CENTER">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="345.0" prefHeight="41.0" prefWidth="133.0" text="Necesary Changes - ">
+      <Label layoutX="27.0" layoutY="306.0" prefHeight="41.0" prefWidth="164.0" text="If Necesary Changes - ">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="138.0" layoutY="103.0" prefHeight="55.0" prefWidth="176.0" text="Pick Product - ">
+      <Label layoutX="134.0" layoutY="50.0" prefHeight="55.0" prefWidth="176.0" text="Select Product Category">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="149.0" prefHeight="41.0" prefWidth="176.0" text="Product Specification -">
+      <Label layoutX="14.0" layoutY="105.0" prefHeight="41.0" prefWidth="176.0" text="Product Specification -">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <ComboBox layoutX="270.0" layoutY="118.0" prefWidth="150.0" />
-      <TableView layoutX="15.0" layoutY="190.0" prefHeight="133.0" prefWidth="647.0">
+      <ComboBox fx:id="productCalegoryReviewComboBOx" layoutX="310.0" layoutY="71.0" prefWidth="150.0" />
+      <TableView fx:id="reviewProductTableView" layoutX="10.0" layoutY="147.0" prefHeight="109.0" prefWidth="650.0">
         <columns>
-          <TableColumn prefWidth="638.0" text="Show Product Specification" />
+          <TableColumn fx:id="specificationNameReviewTableColumn" prefWidth="164.0" text="Specification Name" />
+            <TableColumn fx:id="toleranceRangeReviewTableColumn" prefWidth="143.0" text="Tolerance Range" />
+            <TableColumn fx:id="currentStatusReviewTableColumn" prefWidth="161.0" text="Current Status" />
+            <TableColumn fx:id="lastUpdatedReviewTableColumn" prefWidth="178.0" text="Last Updated" />
         </columns>
       </TableView>
-      <Button layoutX="473.0" layoutY="114.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="85.0" text="Check">
+      <Button layoutX="485.0" layoutY="67.0" mnemonicParsing="false" onAction="#checkReviewButtonOnAction" prefHeight="33.0" prefWidth="85.0" text="Check">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="536.0" layoutY="386.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="76.0" text="Replace">
-         <font>
-            <Font name="System Bold Italic" size="12.0" />
-         </font>
-      </Button>
-      <Button layoutX="28.0" layoutY="456.0" mnemonicParsing="false" text="Save Change">
+      <Button layoutX="421.0" layoutY="368.0" mnemonicParsing="false" onAction="#saveChangeReviewButtonOnAction" prefHeight="118.0" prefWidth="190.0" text="Save Change">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Button>
-      <TextField layoutX="25.0" layoutY="386.0" prefHeight="33.0" prefWidth="477.0" />
+      <TextField fx:id="toleranceRangeReviewTextField" layoutX="159.0" layoutY="365.0" prefHeight="33.0" prefWidth="202.0" />
+      <Label layoutX="28.0" layoutY="361.0" prefHeight="41.0" prefWidth="176.0" text="Tolerance Range">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="444.0" prefHeight="33.0" prefWidth="130.0" text="Last Updated">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="403.0" prefHeight="41.0" prefWidth="176.0" text="Current Status">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="currentStatusReviewTextField" layoutX="159.0" layoutY="407.0" prefHeight="33.0" prefWidth="202.0" />
+      <TextField fx:id="lastUpdateReviewTextField" layoutX="159.0" layoutY="444.0" prefHeight="33.0" prefWidth="202.0" />
    </children>
 </AnchorPane>

@@ -4,6 +4,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -13,62 +14,62 @@
 
 <AnchorPane prefHeight="610.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.TrackQualityMetricsTrackQualityMetricsController">
    <children>
-      <Label layoutX="199.0" layoutY="19.0" prefHeight="68.0" prefWidth="255.0" text="Track Quality Metrics">
+      <Label fx:id="QualityMetrics" layoutX="199.0" layoutY="19.0" prefHeight="68.0" prefWidth="255.0" text="Track Quality Metrics">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <DatePicker layoutX="181.0" layoutY="139.0" />
-      <DatePicker layoutX="181.0" layoutY="185.0" />
+      <DatePicker fx:id="periodStartsQualityMetricsDatePicker" layoutX="181.0" layoutY="139.0" />
+      <DatePicker fx:id="periodEndsQualityMetricsDatePicker" layoutX="181.0" layoutY="185.0" />
       <Label layoutX="37.0" layoutY="139.0" prefHeight="25.0" prefWidth="123.0" text="Track Period Starts">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="40.0" layoutY="185.0" prefHeight="25.0" prefWidth="123.0" text="Track Period Ends">
+      <Label layoutX="37.0" layoutY="185.0" prefHeight="25.0" prefWidth="123.0" text="Track Period Ends">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="392.0" layoutY="139.0" prefHeight="25.0" prefWidth="84.0" text="Batch Id">
+      <Label layoutX="37.0" layoutY="235.0" prefHeight="25.0" prefWidth="84.0" text="Batch Id">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <ComboBox layoutX="476.0" layoutY="139.0" prefWidth="150.0" />
-      <Button layoutX="651.0" layoutY="139.0" mnemonicParsing="false" text="Search" />
-      <Label layoutX="392.0" layoutY="185.0" prefHeight="25.0" prefWidth="71.0" text="Product ">
+      <ComboBox fx:id="batchIdQualityMetricsComboBox" layoutX="121.0" layoutY="235.0" prefWidth="150.0" />
+      <Button layoutX="293.0" layoutY="255.0" mnemonicParsing="false" onAction="#searchQualityMetricsButtonOnAction" text="Search" />
+      <Label layoutX="37.0" layoutY="267.0" prefHeight="25.0" prefWidth="71.0" text="Product ">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <ComboBox layoutX="476.0" layoutY="185.0" prefWidth="150.0" />
-      <TabPane layoutX="37.0" layoutY="257.0" prefHeight="200.0" prefWidth="675.0" tabClosingPolicy="UNAVAILABLE">
+      <ComboBox fx:id="productQualityMetricsComboBox" layoutX="121.0" layoutY="267.0" prefWidth="150.0" />
+      <TabPane layoutX="37.0" layoutY="327.0" prefHeight="200.0" prefWidth="675.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Previous Performance">
+          <Tab fx:id="previousPerformanceTabPane" text="Previous Performance">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutX="2.0" layoutY="-1.0" prefHeight="173.0" prefWidth="675.0">
+                        <TableView layoutY="-1.0" prefHeight="173.0" prefWidth="675.0">
                            <columns>
-                              <TableColumn prefWidth="176.0" text="Purity level" />
-                              <TableColumn prefWidth="298.0" text="Contamination rates." />
-                              <TableColumn prefWidth="216.0" text="Compliance scores." />
+                              <TableColumn fx:id="averageQualityScore1TableColumn" prefWidth="176.0" text="Average Quality Score" />
+                              <TableColumn fx:id="defectsPerBatch1TableColumn" prefWidth="298.0" text="Defects per Batch" />
+                              <TableColumn fx:id="improvementRate1TableColumn" prefWidth="216.0" text="Improvement Rate" />
                            </columns>
                         </TableView>
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="New Performance">
+          <Tab fx:id="newPerformanceTabPane" text="New Performance">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <TableView layoutY="-1.0" prefHeight="173.0" prefWidth="675.0">
                            <columns>
-                              <TableColumn prefWidth="176.0" text="Purity level" />
-                              <TableColumn prefWidth="298.0" text="Contamination rates." />
-                              <TableColumn prefWidth="216.0" text="Compliance scores." />
+                              <TableColumn fx:id="averageQualityScore2TableColumn" prefWidth="176.0" text="Average Quality Score" />
+                              <TableColumn fx:id="defectsPerBatch2TableColumn" prefWidth="298.0" text="Defects per Batch" />
+                              <TableColumn fx:id="improvementRate2TableColumn" prefWidth="216.0" text="Improvement Rate" />
                            </columns>
                         </TableView>
                      </children>
@@ -77,10 +78,30 @@
           </Tab>
         </tabs>
       </TabPane>
-      <Button layoutX="559.0" layoutY="482.0" mnemonicParsing="false" text="Download Performance ">
+      <Button layoutX="559.0" layoutY="544.0" mnemonicParsing="false" onAction="#downloadPerformanceQualityMetricsButtonOnAction" text="Download Performance ">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
+      <RadioButton fx:id="last7DayRadioButton" layoutX="503.0" layoutY="131.0" mnemonicParsing="false" text="Last 7 Day">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="lastMonthRadioButton" layoutX="503.0" layoutY="156.0" mnemonicParsing="false" text="Last Month">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="lastQuarterRadioButton" layoutX="503.0" layoutY="177.0" mnemonicParsing="false" text="Last Quarter">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="customRangeRadioButton" layoutX="503.0" layoutY="202.0" mnemonicParsing="false" text="Custom Range">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
    </children>
 </AnchorPane>

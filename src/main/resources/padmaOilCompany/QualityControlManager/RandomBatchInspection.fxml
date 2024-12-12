@@ -1,53 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="591.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.RandomBatchInspectionController">
+<AnchorPane prefHeight="614.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.RandomBatchInspectionController">
    <children>
-      <Label layoutX="180.0" layoutY="14.0" prefHeight="115.0" prefWidth="390.0" text="Random Batch Inspection Section">
+      <Label layoutX="154.0" layoutY="-15.0" prefHeight="95.0" prefWidth="390.0" text="Random Batch Inspection Section">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="86.0" layoutY="112.0" prefHeight="40.0" prefWidth="116.0" text="Batch section - ">
+      <Label layoutX="32.0" layoutY="314.0" prefHeight="40.0" prefWidth="116.0" text="Temperature">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="22.0" layoutY="186.0" prefHeight="25.0" prefWidth="104.0" text="Batch information">
+      <Label layoutX="32.0" layoutY="63.0" prefHeight="25.0" prefWidth="104.0" text="Batch information">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="18.0" layoutY="391.0" prefHeight="14.0" prefWidth="179.0" text="Comprehensive report ">
+      <Button layoutX="613.0" layoutY="89.0" mnemonicParsing="false" onAction="#showDateRandomBatchButtonOnAction" text="Show Data">
          <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Label>
-      <Button layoutX="576.0" layoutY="379.0" mnemonicParsing="false" text="Show Data" />
-      <Button layoutX="578.0" layoutY="336.0" mnemonicParsing="false" text="Save Date" />
-      <ComboBox layoutX="209.0" layoutY="120.0" prefHeight="32.0" prefWidth="247.0" />
-      <TableView layoutX="22.0" layoutY="211.0" prefHeight="115.0" prefWidth="653.0">
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <TableView fx:id="randomBatchInspection3TabelView" layoutX="34.0" layoutY="470.0" prefHeight="115.0" prefWidth="653.0">
         <columns>
-          <TableColumn prefWidth="176.0" text="Temperature" />
-          <TableColumn prefWidth="109.0" text="Oil Purity" />
-            <TableColumn prefWidth="170.0" text="Density" />
-            <TableColumn prefWidth="202.0" text="Packaging conditions" />
+          <TableColumn fx:id="temperatureBatchTableColumn" prefWidth="121.0" text="Temperature" />
+          <TableColumn fx:id="oilPurityBatchTableColumn" prefWidth="190.0" text="Oil Purity" />
+            <TableColumn fx:id="densityBatchTableColumn" prefWidth="147.0" text="Density" />
+            <TableColumn fx:id="pHlevelBatchTableColumn" prefWidth="192.0" text="pH level" />
         </columns>
       </TableView>
-      <TableView layoutX="18.0" layoutY="417.0" prefHeight="130.0" prefWidth="653.0">
+      <Button layoutX="197.0" layoutY="62.0" mnemonicParsing="false" onAction="#randomSelectionBatchButtonOnAction" text="Random Selected Batch">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <TableView fx:id="randomBatchInspection1TabelView" layoutX="26.0" layoutY="95.0" prefHeight="151.0" prefWidth="343.0">
          <columns>
-            <TableColumn prefWidth="140.0" text="Batch Id" />
-            <TableColumn prefWidth="145.0" text="Inspection Date" />
-            <TableColumn prefWidth="170.0" text="Issue Detected" />
-            <TableColumn prefWidth="202.0" text="Corrective Date" />
+            <TableColumn fx:id="batchIdRandomBatchTableColumn" prefWidth="90.0" text="Batch Id" />
+            <TableColumn fx:id="productionDateRandomBatchTableColumn" prefWidth="124.0" text="Production Date" />
+            <TableColumn fx:id="productionTypeRandomBatchTableColumn" prefWidth="128.0" text="Production Type" />
          </columns>
       </TableView>
+      <Label layoutX="32.0" layoutY="433.0" prefHeight="40.0" prefWidth="116.0" text="Batch section - ">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="321.0" layoutY="314.0" prefHeight="40.0" prefWidth="116.0" text="Density">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="322.0" layoutY="371.0" prefHeight="40.0" prefWidth="116.0" text="pH level">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="372.0" prefHeight="40.0" prefWidth="116.0" text="Oil Purity">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="densityRandomBatchTextField" layoutX="406.0" layoutY="321.0" />
+      <TextField fx:id="temperatureRandomBatchTextField" layoutX="148.0" layoutY="321.0" />
+      <TextField fx:id="pHlevelRandomBatchTextField" layoutX="406.0" layoutY="379.0" />
+      <TextField fx:id="oilPurityRandomBatchTextField" layoutX="148.0" layoutY="378.0" />
+      <TableView fx:id="randomBatchInspection2TabelView" layoutX="379.0" layoutY="123.0" prefHeight="95.0" prefWidth="331.0">
+         <columns>
+            <TableColumn fx:id="temperatureRandomBatchTableColumn" prefWidth="88.0" text="Temperature" />
+            <TableColumn fx:id="oilPurityRandomBatchTableColumn" prefWidth="71.0" text="Oil Purity" />
+            <TableColumn fx:id="densityRandomBatchTableColumn" prefWidth="78.0" text="Density" />
+            <TableColumn fx:id="pHlevelRandomBatchTableColumn" prefWidth="92.0" text="pH level" />
+         </columns>
+      </TableView>
+      <Button layoutX="534.0" layoutY="440.0" mnemonicParsing="false" onAction="#showNewDataRandomBatchButtonOnAction" text="Show New Data">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="574.0" layoutY="312.0" mnemonicParsing="false" onAction="#saveRandomBatchButtonOnAction" prefHeight="95.0" prefWidth="106.0" text="Save">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

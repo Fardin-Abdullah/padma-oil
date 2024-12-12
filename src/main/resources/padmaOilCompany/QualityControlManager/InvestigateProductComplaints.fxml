@@ -2,47 +2,67 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="521.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.InvestigateProductComplaintsController">
    <children>
-      <TableView layoutX="14.0" layoutY="14.0" prefHeight="135.0" prefWidth="651.0">
-        <columns>
-          <TableColumn prefWidth="650.0" text="View All complain" />
-        </columns>
-      </TableView>
-      <Label layoutX="183.0" layoutY="174.0" prefHeight="33.0" prefWidth="134.0" text="Choose Complain - ">
+      <Label layoutX="102.0" layoutY="56.0" prefHeight="43.0" prefWidth="206.0" text="Choose Products Complain ID- ">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <ComboBox layoutX="340.0" layoutY="174.0" prefHeight="33.0" prefWidth="206.0" />
-      <Button layoutX="523.0" layoutY="343.0" mnemonicParsing="false" text="Send Result">
+      <ComboBox fx:id="complainIdComplainComboBox" layoutX="323.0" layoutY="61.0" prefHeight="33.0" prefWidth="206.0" />
+      <Button layoutX="541.0" layoutY="65.0" mnemonicParsing="false" onAction="#searchComplainButtonOnAction" text="Search Complain">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Label layoutX="24.0" layoutY="224.0" text="Add Investigation Result-">
+      <Label layoutX="32.0" layoutY="314.0" text="Add Investigation Result-">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Label layoutX="24.0" layoutY="243.0" prefHeight="90.0" prefWidth="598.0" style="-fx-background-color: silver;" />
-      <Label layoutX="22.0" layoutY="378.0" prefHeight="80.0" prefWidth="622.0" style="-fx-background-color: silver;" />
-      <Label layoutX="24.0" layoutY="359.0" text="Add Feedback - ">
+      <Label layoutX="32.0" layoutY="423.0" text="Investigator Name ">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Label>
-      <Button layoutX="523.0" layoutY="468.0" mnemonicParsing="false" text="Send Feedback">
+      <Button layoutX="518.0" layoutY="472.0" mnemonicParsing="false" onAction="#saveResultButtonOnAction" text="Save Result">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
+      <Label layoutX="196.0" layoutY="6.0" prefHeight="50.0" prefWidth="298.0" text="Complaint Management">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="complainManagementTableView" layoutX="19.0" layoutY="107.0" prefHeight="154.0" prefWidth="629.0">
+        <columns>
+          <TableColumn fx:id="complaintIdComplaintTableColumn" prefWidth="151.0" text="Complaint ID" />
+          <TableColumn fx:id="productNameComplaintTableColumn" prefWidth="188.0" text="Product Name" />
+            <TableColumn fx:id="complaintDateComplaintTableColumn" prefWidth="140.0" text="Complaint Date" />
+            <TableColumn fx:id="statusComplaintTableColumn" prefWidth="149.0" text="Status" />
+        </columns>
+      </TableView>
+      <Label layoutX="388.0" layoutY="314.0" text="Details of Findings">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="366.0" prefHeight="25.0" prefWidth="124.0" text="Investigation Date">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="FindingsComplaintTextField" layoutX="392.0" layoutY="341.0" prefHeight="113.0" prefWidth="251.0" />
+      <TextField fx:id="investigationNameTextField" layoutX="159.0" layoutY="420.0" />
+      <DatePicker fx:id="investigationDateComplaintDatePicker" layoutX="159.0" layoutY="360.0" />
    </children>
 </AnchorPane>

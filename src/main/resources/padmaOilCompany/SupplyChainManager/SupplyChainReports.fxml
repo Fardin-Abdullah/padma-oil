@@ -21,7 +21,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <ComboBox layoutX="314.0" layoutY="103.0" onAction="#alu" prefWidth="150.0" />
+      <ComboBox fx:id="selectedReportingPeriodChainReportsComboBox" layoutX="314.0" layoutY="103.0" prefWidth="150.0" />
       <Label layoutX="281.0" layoutY="142.0" prefHeight="37.0" prefWidth="117.0" text="Reporting Period">
          <font>
             <Font name="System Bold" size="13.0" />
@@ -42,22 +42,22 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <DatePicker layoutX="208.0" layoutY="203.0" />
-      <DatePicker layoutX="208.0" layoutY="254.0" />
-      <Button layoutX="479.0" layoutY="208.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="129.0" text="Select and Process">
+      <DatePicker fx:id="startingPeriodChainReportsDatePicker" layoutX="208.0" layoutY="203.0" />
+      <DatePicker fx:id="endingPeriodChainReportsDatePicker" layoutX="208.0" layoutY="254.0" />
+      <Button layoutX="479.0" layoutY="208.0" mnemonicParsing="false" onAction="#selectAndProcessChainReportsBttonOnAction" prefHeight="53.0" prefWidth="129.0" text="Select and Process">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Button>
-      <TableView layoutX="27.0" layoutY="396.0" prefHeight="187.0" prefWidth="636.0">
+      <TableView fx:id="supplyChainReportTableView" layoutX="27.0" layoutY="396.0" prefHeight="187.0" prefWidth="636.0">
         <columns>
-          <TableColumn prefWidth="172.0" text="Shipment Performance" />
-          <TableColumn prefWidth="143.0" text="Inventory Levels" />
-            <TableColumn prefWidth="145.0" text="Supplier Performance" />
-            <TableColumn prefWidth="175.0" text="Delivery Timelines" />
+          <TableColumn fx:id="shipmentPerformanceChainReportsTableColumn" prefWidth="172.0" text="Shipment Performance" />
+          <TableColumn fx:id="inventoryLevelsChainReportsTableColumn" prefWidth="143.0" text="Inventory Levels" />
+            <TableColumn fx:id="suppliersPerformerChainReportTableColumn" prefWidth="145.0" text="Supplier Performance" />
+            <TableColumn fx:id="deliveryTimelineChainReportsTableColumn" prefWidth="175.0" text="Delivery Timelines" />
         </columns>
       </TableView>
-      <Button layoutX="527.0" layoutY="346.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="136.0" text="Generate Report">
+      <Button layoutX="527.0" layoutY="346.0" mnemonicParsing="false" onAction="#generateReportChainReportsButtonOnAction" prefHeight="37.0" prefWidth="136.0" text="Generate Report">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
