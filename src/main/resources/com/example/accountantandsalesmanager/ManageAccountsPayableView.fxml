@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="553.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accountantandsalesmanager.ManageAccountsPayableViewController">
+<AnchorPane fx:id="manageAccPayableAnchorPane" prefHeight="553.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accountantandsalesmanager.ManageAccountsPayableViewController">
    <children>
       <Label layoutX="14.0" layoutY="75.0" text="Vendor:" />
       <Label layoutX="15.0" layoutY="126.0" text="Invoice Number:" />
@@ -46,5 +46,6 @@
       <Button layoutX="206.0" layoutY="251.0" mnemonicParsing="false" onAction="#resetButtonOnAction" text="Reset" />
       <Label layoutX="12.0" layoutY="180.0" text="Invoice Due date" />
       <DatePicker fx:id="invoiceDueDatePicker" layoutX="118.0" layoutY="176.0" />
+      <Button layoutX="270.0" layoutY="251.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

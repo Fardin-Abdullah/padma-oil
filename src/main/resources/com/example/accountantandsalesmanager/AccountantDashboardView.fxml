@@ -39,7 +39,7 @@
           </Menu>
         </menus>
       </MenuBar>
-      <AnchorPane layoutX="51.0" layoutY="169.0" prefHeight="200.0" prefWidth="567.0" style="-fx-background-color: #D5EFF8;">
+      <AnchorPane layoutX="51.0" layoutY="146.0" prefHeight="200.0" prefWidth="567.0" style="-fx-background-color: #D5EFF8;">
          <children>
             <Label layoutX="187.0" layoutY="14.0" text="Accountant Information">
                <font>
@@ -49,10 +49,18 @@
             <Label layoutX="14.0" layoutY="55.0" text="User Id:" />
             <Label layoutX="14.0" layoutY="91.0" text="Department:" />
             <Label layoutX="14.0" layoutY="124.0" text="Role:" />
-            <Button layoutX="14.0" layoutY="160.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="Update Profile" textFill="WHITE" />
+            <Button layoutX="14.0" layoutY="160.0" mnemonicParsing="false" onAction="#updateProfileButtonOnAction" style="-fx-background-color: blue;" text="Update Profile" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
             <TextField fx:id="userIdTextField" layoutX="113.0" layoutY="51.0" prefHeight="25.0" prefWidth="280.0" />
             <TextField fx:id="deptTextField" layoutX="112.0" layoutY="87.0" prefHeight="25.0" prefWidth="280.0" />
             <TextField fx:id="roleTextField" layoutX="113.0" layoutY="120.0" prefHeight="25.0" prefWidth="280.0" />
+            <Button layoutX="125.0" layoutY="160.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: blue;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <Label layoutX="81.0" layoutY="70.0" text="Welocme To Accountant Dashboard">

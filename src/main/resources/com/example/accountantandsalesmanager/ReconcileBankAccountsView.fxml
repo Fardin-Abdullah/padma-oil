@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="579.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accountantandsalesmanager.ReconcileBankAccountsViewController">
+<AnchorPane fx:id="reconcileBankAccountsAnchorPane" prefHeight="579.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accountantandsalesmanager.ReconcileBankAccountsViewController">
    <children>
-      <ComboBox fx:id="bankAccountComboBox" layoutX="116.0" layoutY="57.0" prefWidth="150.0" />
+      <ComboBox fx:id="bankAccountComboBox" layoutX="191.0" layoutY="57.0" prefHeight="25.0" prefWidth="175.0" />
       <Label layoutX="14.0" layoutY="61.0" text="Bank Account:" />
       <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="310.0" text="Reconcile Bank Accounts">
          <font>
@@ -27,12 +27,13 @@
             <TableColumn fx:id="statusTableColumn" prefWidth="146.00003051757812" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="14.0" layoutY="227.0" mnemonicParsing="false" onAction="#updateAndSaveButtonOnAction" text="Update and Save" />
-      <Button layoutX="207.0" layoutY="290.0" mnemonicParsing="false" onAction="#showTableViewOfHistoryTransactionButtonOnAction" text="Show history Bank Transaction" />
+      <Button layoutX="14.0" layoutY="211.0" mnemonicParsing="false" onAction="#updateAndSaveButtonOnAction" text="Update and Save" />
+      <Button layoutX="38.0" layoutY="290.0" mnemonicParsing="false" onAction="#showTableViewOfHistoryTransactionButtonOnAction" prefHeight="25.0" prefWidth="549.0" text="Show history Bank Transaction" />
       <DatePicker fx:id="bankStatementDatePicker" layoutX="191.0" layoutY="109.0" />
       <Label layoutX="14.0" layoutY="113.0" text="Date of the Bank Statements:" />
       <Label layoutX="14.0" layoutY="168.0" text="Transaction ID:" />
-      <TextField fx:id="transactionIdTextField" layoutX="117.0" layoutY="164.0" />
-      <Button layoutX="14.0" layoutY="264.0" mnemonicParsing="false" onAction="#reconcileTransactionButtonOnAction" text="Reconcile Transaction" />
+      <TextField fx:id="transactionIdTextField" layoutX="191.0" layoutY="164.0" prefHeight="25.0" prefWidth="175.0" />
+      <Button layoutX="14.0" layoutY="247.0" mnemonicParsing="false" onAction="#reconcileTransactionButtonOnAction" text="Reconcile Transaction" />
+      <Button layoutX="12.0" layoutY="540.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

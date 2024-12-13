@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="533.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accountantandsalesmanager.RecordFinancialTransactionViewController">
+<AnchorPane fx:id="recordFinancialTransactionAnchorPane" prefHeight="588.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.accountantandsalesmanager.RecordFinancialTransactionViewController">
    <children>
       <Label layoutX="14.0" layoutY="14.0" prefHeight="33.0" prefWidth="257.0" text="Record Financial Transaction">
          <font>
@@ -37,10 +37,11 @@
             <TableColumn fx:id="transactionDateTableColumn" prefWidth="134.66668701171875" text="Transaction Date" />
         </columns>
       </TableView>
-      <Button layoutX="16.0" layoutY="274.0" mnemonicParsing="false" onAction="#showTableViewTransactionHistoryButtonOnAction" prefHeight="25.0" prefWidth="600.0" text="Show  Transaction History " textFill="#160d0d">
+      <Button layoutX="17.0" layoutY="254.0" mnemonicParsing="false" onAction="#showTableViewTransactionHistoryButtonOnAction" prefHeight="25.0" prefWidth="600.0" text="Show  Transaction History " textFill="#160d0d">
          <font>
             <Font name="System Italic" size="18.0" />
          </font>
       </Button>
+      <Button layoutX="12.0" layoutY="549.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="25.0" prefWidth="81.0" text="Back" />
    </children>
 </AnchorPane>
