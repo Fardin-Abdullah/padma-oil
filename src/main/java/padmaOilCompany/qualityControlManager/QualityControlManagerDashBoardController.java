@@ -1,6 +1,6 @@
 package padmaOilCompany.qualityControlManager;
 
-public class DashBoardQualityControlManagerController
+public class QualityControlManagerDashBoardController
 {
     @javafx.fxml.FXML
     public void initialize() {
