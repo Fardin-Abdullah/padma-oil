@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="project.padmaoilcompanyltd.MAccessHRViewController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label text="Access HR Data" style="-fx-font-size: 18; -fx-background-color: yellow;"
+               AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+        <VBox spacing="10.0" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0">
+            <Button text="Select HR Data Type" onAction="#selectHRDataType" />
+            <Button text="Fetch HR Data" onAction="#fetchHRData" />
+            <Button text="View/Export Data" onAction="#viewExportData" />
+        </VBox>
+    </children>
+
+</AnchorPane>

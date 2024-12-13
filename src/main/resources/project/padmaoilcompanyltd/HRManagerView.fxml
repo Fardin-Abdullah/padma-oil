@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.padmaoilcompanyltd.HRManagerViewController">
+    <children>
+         <Label alignment="TOP_CENTER" style="-fx-background-color: cyan;" text="HR Manager Dashboard" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+             <font>
+                 <Font size="18.0" />
+             </font>
+         </Label>
+      <SplitPane dividerPositions="0.4" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <items>
+          <AnchorPane>
+               <children>
+                    <VBox fillWidth="true" spacing="10" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#manageEmployeeButtonOnAction" text="Manage Employee Records" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#reviewTimeOffButtonOnAction" text="Review Time-Off Requests" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processPayrollButtonOnAction" text="Process Payroll" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#updateJobButtonOnAction" text="Update Job Postings" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#trackTrainingButtonOnAction" text="Track Training Sessions" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#manageBenefitsButtonOnAction" text="Manage Benefits" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#enforcePolicyButtonOnAction" text="Enforce Workplace Policies" />
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#approveHireButtonOnAction" text="Approve New Hires" />
+                    </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </items>
+      </SplitPane>
+         <Button alignment="TOP_LEFT" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
+    </children>
+</AnchorPane>
