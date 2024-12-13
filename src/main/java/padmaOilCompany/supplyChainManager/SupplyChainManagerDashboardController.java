@@ -38,7 +38,7 @@ public class SupplyChainManagerDashboardController
     public void manageInventoryLevelsButtonOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void monitorOIlShipmentButtonOnAction(ActionEvent actionEvent) {
     }
 
@@ -52,5 +52,9 @@ public class SupplyChainManagerDashboardController
 
     @javafx.fxml.FXML
     public void LogOutSupplyChainManagerButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void monitorOilShipmentButtonOnAction(ActionEvent actionEvent) {
     }
 }
