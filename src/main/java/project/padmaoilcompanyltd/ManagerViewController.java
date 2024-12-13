@@ -14,6 +14,8 @@ public class ManagerViewController {
 
     @javafx.fxml.FXML
     private AnchorPane rightSplitPaneFxid;
+    @javafx.fxml.FXML
+    private Button backfxiddd;
 
     @javafx.fxml.FXML
     public void initialize() {
