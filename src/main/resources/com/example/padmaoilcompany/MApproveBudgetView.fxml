@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.padmaoilcompany.MApproveBudgetViewController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <Label style="-fx-font-size: 18; -fx-background-color: yellow;" text="Approve Budget Allocations"
+           AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0"/>
+
+    <VBox spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+          AnchorPane.topAnchor="50.0">
+        <Label text="Pending Budget Requests:"/>
+        <TableView fx:id="budgetRequestsTableView" prefHeight="200.0">
+            <columns>
+                <TableColumn text="Request ID"/>
+                <TableColumn text="Department"/>
+                <TableColumn text="Amount"/>
+                <TableColumn text="Status"/>
+            </columns>
+        </TableView>
+        <Button onAction="#approveBudgetOnAction" text="Approve Selected Request"/>
+    </VBox>
+</AnchorPane>

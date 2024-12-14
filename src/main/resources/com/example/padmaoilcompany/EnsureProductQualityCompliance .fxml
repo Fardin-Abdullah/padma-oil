@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ensureProductQualityComplianceAnchorPane" prefHeight="612.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.padmaoilcompany.EnsureProductQualityComplianceController">
+   <children>
+      <Label layoutX="149.0" layoutY="41.0" prefHeight="55.0" prefWidth="112.0" text="Product Batch-">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="productBatchQualityComboBox" layoutX="261.0" layoutY="56.0" prefWidth="150.0" />
+      <Label layoutX="194.0" prefHeight="55.0" prefWidth="406.0" text="Product Quality Section" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="386.0" prefHeight="32.0" prefWidth="104.0" text="Quality Test  -">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="247.0" layoutY="175.0" />
+      <Button layoutX="429.0" layoutY="53.0" mnemonicParsing="false" onAction="#checkResultQualityButtonOnAction" prefHeight="32.0" prefWidth="104.0" text="Check Result">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="560.0" layoutY="293.0" mnemonicParsing="false" onAction="#saveResultQualityButtonOnAction" prefHeight="42.0" prefWidth="118.0" text="Save Result">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="568.0" layoutY="389.0" mnemonicParsing="false" onAction="#viewAllResultQualityButtonOnAction" text="View All Result">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="productQualitySection2TableVIew" layoutX="31.0" layoutY="425.0" prefHeight="172.0" prefWidth="633.0">
+        <columns>
+          <TableColumn fx:id="viscosityProductQualityTableColumn" prefWidth="139.0" text="Viscosity" />
+            <TableColumn fx:id="densityProductQualityTableColumn" prefWidth="184.0" text="Density" />
+            <TableColumn fx:id="purityProductQualityTableColumn" prefWidth="145.0" text="Purity" />
+            <TableColumn fx:id="pHlevelProductQualityTableColumn" prefWidth="163.0" text="pH level" />
+        </columns>
+      </TableView>
+      <TableView fx:id="productQualitySection1TableView" layoutX="33.0" layoutY="98.0" prefHeight="155.0" prefWidth="643.0">
+         <columns>
+            <TableColumn fx:id="viscosityQualityTableColumn" prefWidth="200.0" text="Viscosity" />
+            <TableColumn fx:id="densityQualityTableColumn" prefWidth="220.0" text="Density" />
+            <TableColumn fx:id="purityQualityTableColumn" prefWidth="222.0" text="Purity" />
+         </columns>
+      </TableView>
+      <Label layoutX="32.0" layoutY="289.0" prefHeight="25.0" prefWidth="101.0" text="pH level">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pHlevelQualityTextField" layoutX="120.0" layoutY="289.0" />
+      <Label layoutX="30.0" layoutY="323.0" prefHeight="32.0" prefWidth="104.0" text="Viscosity">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="325.0" layoutY="285.0" prefHeight="32.0" prefWidth="104.0" text="Density">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="viscosityQualityTextField" layoutX="120.0" layoutY="327.0" />
+      <TextField fx:id="densityQualityTextField" layoutX="397.0" layoutY="289.0" />
+      <Label layoutX="325.0" layoutY="324.0" prefHeight="32.0" prefWidth="104.0" text="Purity">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="purityQualityTextField" layoutX="397.0" layoutY="327.0" />
+      <Button layoutX="619.0" layoutY="53.0" mnemonicParsing="false" onAction="#backQualityButtonOnAction" text="Back" />
+   </children>
+</AnchorPane>
