@@ -6,4 +6,5 @@ module com.example.simulatingoperationsofpadmaoil {
 
     opens padmaOilCompany to javafx.fxml;
     exports padmaOilCompany;
+
 }

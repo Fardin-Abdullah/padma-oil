@@ -1,9 +1,13 @@
-package padmaOilCompany.qualityControlManager;
+package padmaOilCompany;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class RandomBatchInspectionController
 {
@@ -43,6 +47,8 @@ public class RandomBatchInspectionController
     private TextField densityRandomBatchTextField;
     @javafx.fxml.FXML
     private TableColumn productionTypeRandomBatchTableColumn;
+    @javafx.fxml.FXML
+    private AnchorPane randomBatchInspectionAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -66,5 +72,17 @@ public class RandomBatchInspectionController
 
     @javafx.fxml.FXML
     public void backInspectionButtonOnAction(ActionEvent actionEvent) {
+        try{
+
+            FXMLLoader fxmlLoader = new FXMLLoader(RandomBatchInspectionController.class.getResource("/padmaOilCompany/QualityControlManager/QualityControlManagerDashBoard.fxml"));
+            Scene viewscene = new Scene(fxmlLoader.load());
+            Stage tempStage = (Stage)randomBatchInspectionAnchorPane.getScene().getWindow();
+            //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
+            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setScene(viewscene);
+            tempStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

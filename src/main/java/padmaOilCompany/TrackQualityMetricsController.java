@@ -1,9 +1,13 @@
-package padmaOilCompany.qualityControlManager;
+package padmaOilCompany;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
-public class TrackQualityMetricsTrackQualityMetricsController
+public class TrackQualityMetricsController
 {
     @javafx.fxml.FXML
     private TableColumn improvementRate2TableColumn;
@@ -39,6 +43,8 @@ public class TrackQualityMetricsTrackQualityMetricsController
     private ComboBox productQualityMetricsComboBox;
     @javafx.fxml.FXML
     private Label QualityMetrics;
+    @javafx.fxml.FXML
+    private AnchorPane trackQualityMetricAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -54,5 +60,17 @@ public class TrackQualityMetricsTrackQualityMetricsController
 
     @javafx.fxml.FXML
     public void backMetricsButtonOnAction(ActionEvent actionEvent) {
+        try{
+
+            FXMLLoader fxmlLoader = new FXMLLoader(TrackQualityMetricsController.class.getResource("/padmaOilCompany/QualityControlManager/QualityControlManagerDashBoard.fxml"));
+            Scene viewscene = new Scene(fxmlLoader.load());
+            Stage tempStage = (Stage)trackQualityMetricAnchorPane.getScene().getWindow();
+            //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
+            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setScene(viewscene);
+            tempStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

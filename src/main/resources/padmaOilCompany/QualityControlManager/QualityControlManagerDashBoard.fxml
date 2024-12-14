@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="qualityControlManagementAnchorPane" prefHeight="575.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.QualityControlManagerDashBoardController">
+<AnchorPane fx:id="qualityControlManagementAnchorPane" prefHeight="575.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.QualityControlManagerDashBoardController">
    <children>
       <Label layoutY="42.0" prefHeight="591.0" prefWidth="714.0" style="-fx-background-color: silver;" />
       <Label layoutX="-2.0" layoutY="44.0" prefHeight="116.0" prefWidth="714.0" style="-fx-background-color: silver;" text="                           Welcome, Quality Control Manager!">

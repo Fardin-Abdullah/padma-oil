@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="546.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.ConductSupplierAuditsController">
+<AnchorPane fx:id="conductSuppliderAuditAnchorPane" prefHeight="546.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.ConductSupplierAuditsController">
    <children>
       <Label layoutX="191.0" prefHeight="68.0" prefWidth="260.0" text="Supplier Audit Section">
          <font>

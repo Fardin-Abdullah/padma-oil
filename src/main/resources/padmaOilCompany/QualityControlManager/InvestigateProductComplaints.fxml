@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="521.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.InvestigateProductComplaintsController">
+<AnchorPane fx:id="complaintManagementAnchorPane" prefHeight="521.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.InvestigateProductComplaintsController">
    <children>
       <Label layoutX="102.0" layoutY="56.0" prefHeight="43.0" prefWidth="206.0" text="Choose Products Complain ID- ">
          <font>

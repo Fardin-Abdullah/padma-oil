@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="612.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.EnsureProductQualityComplianceController">
+<AnchorPane fx:id="ensureProductQualityComplianceAnchorPane" prefHeight="612.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.EnsureProductQualityComplianceController">
    <children>
       <Label layoutX="149.0" layoutY="41.0" prefHeight="55.0" prefWidth="112.0" text="Product Batch-">
          <font>

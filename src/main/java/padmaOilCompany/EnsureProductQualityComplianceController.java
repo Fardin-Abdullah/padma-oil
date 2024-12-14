@@ -1,10 +1,14 @@
-package padmaOilCompany.qualityControlManager;
+package padmaOilCompany;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class EnsureProductQualityComplianceController
 {
@@ -36,6 +40,8 @@ public class EnsureProductQualityComplianceController
     private TableColumn purityQualityTableColumn;
     @javafx.fxml.FXML
     private TableColumn viscosityQualityTableColumn;
+    @javafx.fxml.FXML
+    private AnchorPane ensureProductQualityComplianceAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -55,5 +61,17 @@ public class EnsureProductQualityComplianceController
 
     @javafx.fxml.FXML
     public void backQualityButtonOnAction(ActionEvent actionEvent) {
+        try{
+
+            FXMLLoader fxmlLoader = new FXMLLoader(EnsureProductQualityComplianceController.class.getResource("/padmaOilCompany/QualityControlManager/QualityControlManagerDashBoard.fxml"));
+            Scene viewscene = new Scene(fxmlLoader.load());
+            Stage tempStage = (Stage)ensureProductQualityComplianceAnchorPane.getScene().getWindow();
+            //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
+            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setScene(viewscene);
+            tempStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

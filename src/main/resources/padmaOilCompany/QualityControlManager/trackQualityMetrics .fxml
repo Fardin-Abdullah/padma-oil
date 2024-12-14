@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="610.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.TrackQualityMetricsTrackQualityMetricsController">
+<AnchorPane fx:id="trackQualityMetricAnchorPane" prefHeight="610.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.TrackQualityMetricsController">
    <children>
       <Label fx:id="QualityMetrics" layoutX="199.0" layoutY="19.0" prefHeight="68.0" prefWidth="255.0" text="Track Quality Metrics">
          <font>

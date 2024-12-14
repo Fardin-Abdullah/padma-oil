@@ -6,22 +6,22 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class SupplyChainManagerDashboardController
+public class QualityControlManagerDashBoardController
 {
     @javafx.fxml.FXML
-    private AnchorPane supplyChainManagerAnchorPane;
+    private AnchorPane qualityControlManagementAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void supplyChainReportsButtonOnAction(ActionEvent actionEvent) {
+    public void conductSupplierAuditsButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(SupplyChainManagerDashboardController.class.getResource("/padmaOilCompany/SupplyChainReports.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/ConductSupplierAudits .fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
-            Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
+            Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
             tempStage.setTitle("Manage Accounts Recievable");
             tempStage.setScene(viewscene);
@@ -32,12 +32,12 @@ public class SupplyChainManagerDashboardController
     }
 
     @javafx.fxml.FXML
-    public void handleDeliveryIssesButtonOnAction(ActionEvent actionEvent) {
+    public void performRandomBatchInspectionButtonOnActio(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(SupplyChainManagerDashboardController.class.getResource("/padmaOilCompany/HandleDeliveryIssues .fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/RandomBatchInspection.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
-            Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
+            Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
             tempStage.setTitle("Manage Accounts Recievable");
             tempStage.setScene(viewscene);
@@ -48,12 +48,12 @@ public class SupplyChainManagerDashboardController
     }
 
     @javafx.fxml.FXML
-    public void optimizeSupplyChainRoutesButtonOnAction(ActionEvent actionEvent) {
+    public void logOutQualityControlManagerButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(SupplyChainManagerDashboardController.class.getResource("/padmaOilCompany/OptimizeSupplyChainRoutes.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/GenarelDashboard.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
-            Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
+            Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
             tempStage.setTitle("Manage Accounts Recievable");
             tempStage.setScene(viewscene);
@@ -64,30 +64,12 @@ public class SupplyChainManagerDashboardController
     }
 
     @javafx.fxml.FXML
-    public void LogOutSupplyChainManagerButtonOnAction(ActionEvent actionEvent) {
+    public void ensureProductQualityComplianceButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(SupplyChainManagerDashboardController.class.getResource("/padmaOilCompany/GenarelDashboard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/EnsureProductQualityCompliance .fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
-            Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
-            //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
-            tempStage.setScene(viewscene);
-            tempStage.show();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-
-
-    @javafx.fxml.FXML
-    public void manageInventoryLevelsButtonOnAction(ActionEvent actionEvent) {
-        try{
-
-            FXMLLoader fxmlLoader = new FXMLLoader(SupplyChainManagerDashboardController.class.getResource("/padmaOilCompany/ManageInventoryLevels.fxml"));
-            Scene viewscene = new Scene(fxmlLoader.load());
-            Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
+            Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
             tempStage.setTitle("Manage Accounts Recievable");
             tempStage.setScene(viewscene);
@@ -98,12 +80,12 @@ public class SupplyChainManagerDashboardController
     }
 
     @javafx.fxml.FXML
-    public void monitorOilShipmentButtonOnAction(ActionEvent actionEvent) {
+    public void reportNonComplaintProductsButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(SupplyChainManagerDashboardController.class.getResource("/padmaOilCompany/MonitorOilShipments.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/ReportNon-CompliantProducts.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
-            Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
+            Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
             tempStage.setTitle("Manage Accounts Recievable");
             tempStage.setScene(viewscene);
@@ -114,12 +96,12 @@ public class SupplyChainManagerDashboardController
     }
 
     @javafx.fxml.FXML
-    public void reviewSupplierContractsButtonOnAction(ActionEvent actionEvent) {
+    public void trackQualityMetricsButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(SupplyChainManagerDashboardController.class.getResource("/padmaOilCompany/ReviewSupplierContracts.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/trackQualityMetrics.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
-            Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
+            Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
             tempStage.setTitle("Manage Accounts Recievable");
             tempStage.setScene(viewscene);
@@ -130,12 +112,12 @@ public class SupplyChainManagerDashboardController
     }
 
     @javafx.fxml.FXML
-    public void coordinateWithSuppliersButtonOnAction(ActionEvent actionEvent) {
+    public void calibrateQualityTestingButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(SupplyChainManagerDashboardController.class.getResource("/padmaOilCompany/CoordinateWithSuppliers.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/CalibrateQualityTestingEquipment .fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
-            Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
+            Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
             tempStage.setTitle("Manage Accounts Recievable");
             tempStage.setScene(viewscene);
@@ -146,12 +128,28 @@ public class SupplyChainManagerDashboardController
     }
 
     @javafx.fxml.FXML
-    public void scheduleDeliveriesButtonOnAction(ActionEvent actionEvent) {
+    public void reviewProductSpecificationsButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(SupplyChainManagerDashboardController.class.getResource("/padmaOilCompany/ScheduleDeliveries .fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/ReviewProductionSpecifications.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
-            Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
+            Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
+            //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
+            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setScene(viewscene);
+            tempStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void investigateProductComplaintsButtonOnAction(ActionEvent actionEvent) {
+        try{
+
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/InvestigateProductComplaints.fxml"));
+            Scene viewscene = new Scene(fxmlLoader.load());
+            Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
             tempStage.setTitle("Manage Accounts Recievable");
             tempStage.setScene(viewscene);

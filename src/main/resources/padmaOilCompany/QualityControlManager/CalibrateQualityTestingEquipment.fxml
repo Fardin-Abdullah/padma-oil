@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="526.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.CalibrateQualityTestingEquipmentController">
+<AnchorPane fx:id="calibrationSectionAnchorPane" prefHeight="526.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.CalibrateQualityTestingEquipmentController">
    <children>
       <Label layoutX="209.0" layoutY="8.0" prefHeight="69.0" prefWidth="242.0" text="Calibration Section">
          <font>

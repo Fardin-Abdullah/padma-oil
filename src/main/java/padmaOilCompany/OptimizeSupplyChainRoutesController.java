@@ -1,8 +1,11 @@
 package padmaOilCompany;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class OptimizeSupplyChainRoutesController
 {
@@ -51,5 +54,17 @@ public class OptimizeSupplyChainRoutesController
 
     @javafx.fxml.FXML
     public void backRouteButtonOnAction(ActionEvent actionEvent) {
+        try{
+
+            FXMLLoader fxmlLoader = new FXMLLoader(OptimizeSupplyChainRoutesController.class.getResource("/padmaOilCompany/SupplyChainManagerDashboard.fxml"));
+            Scene viewscene = new Scene(fxmlLoader.load());
+            Stage tempStage = (Stage)routeOptimizationAnchorPane.getScene().getWindow();
+            //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
+            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setScene(viewscene);
+            tempStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

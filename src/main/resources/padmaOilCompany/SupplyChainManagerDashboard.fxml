@@ -134,7 +134,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#handleDeliveryIssesButtonOnAction" text="Handle Delivery Issues" />
                   <MenuItem mnemonicParsing="false" onAction="#reviewSupplierContractsButtonOnAction" text="Review Supplier Contracts" />
                   <MenuItem mnemonicParsing="false" onAction="#supplyChainReportsButtonOnAction" text="Supply Chain Reports" />
-                  <MenuItem mnemonicParsing="false" onAction="#scheduleDeliverieButtonOnAction" text="Schedule Deliveries" />
+                  <MenuItem mnemonicParsing="false" onAction="#scheduleDeliveriesButtonOnAction" text="Schedule Deliveries" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">

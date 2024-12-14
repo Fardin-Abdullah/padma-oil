@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="632.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.RandomBatchInspectionController">
+<AnchorPane fx:id="randomBatchInspectionAnchorPane" prefHeight="632.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.RandomBatchInspectionController">
    <children>
       <Label layoutX="154.0" layoutY="-15.0" prefHeight="95.0" prefWidth="390.0" text="Random Batch Inspection Section">
          <font>
