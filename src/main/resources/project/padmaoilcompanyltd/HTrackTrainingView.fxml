@@ -11,4 +11,12 @@
             fx:controller="project.padmaoilcompanyltd.HTrackTrainingViewController"
             prefHeight="400.0" prefWidth="600.0">
 
+    <Label text="Track Training Sessions" style="-fx-font-size: 18; -fx-background-color: yellow;"
+           AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"/>
+
+    <VBox spacing="10.0" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+          AnchorPane.bottomAnchor="10.0">
+        <Button onAction="#viewTrainingProgressOnAction" text="View Training Progress"/>
+        <Button onAction="#generateTrainingReportOnAction" text="Generate Report"/>
+    </VBox>
 </AnchorPane>

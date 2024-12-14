@@ -11,4 +11,18 @@
             fx:controller="project.padmaoilcompanyltd.HManageEmployeeViewController"
             prefHeight="400.0" prefWidth="600.0">
 
+    <Label text="Manage Employee Records" style="-fx-font-size: 18; -fx-background-color: yellow;"
+           AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"/>
+
+    <VBox spacing="10.0" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+          AnchorPane.bottomAnchor="10.0">
+        <Label text="Employee ID:"/>
+        <TextField fx:id="employeeIdTextField" promptText="Enter Employee ID"/>
+        <Button onAction="#searchEmployeeButtonOnAction" text="Search"/>
+
+        <Label text="Update Employee Details:"/>
+        <TextField fx:id="employeeNameField" promptText="Employee Name"/>
+        <TextField fx:id="employeeRoleField" promptText="Role"/>
+        <Button onAction="#saveEmployeeChangesButtonOnAction" text="Save Changes"/>
+    </VBox>
 </AnchorPane>

@@ -3,24 +3,34 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.padmaoilcompanyltd.ViewProductionReportsController">
-    <children>
-        <!-- Header -->
-        <Label text="Production Reports" style="-fx-font-size: 18; -fx-background-color: yellow;"
-               AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="project.padmaoilcompanyltd.MViewReportsViewController"
+            prefHeight="400.0" prefWidth="600.0">
 
-        <!-- Main Content -->
-        <VBox spacing="10.0" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0">
-            <!-- Report Selection -->
-            <Label text="Select Report Type:" />
-            <ComboBox fx:id="reportTypeComboBox" promptText="Choose report type..." />
-            <Button text="Fetch Report" onAction="#fetchReportAction" />
+    <Label style="-fx-font-size: 18; -fx-background-color: yellow;" text="Production Reports"
+           AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0"/>
 
-            <!-- Placeholder for Report Output -->
-            <Label fx:id="reportOutputLabel" text="Report will be displayed here..." wrapText="true" />
+    <VBox spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+          AnchorPane.topAnchor="50.0">
+        <VBox spacing="5.0">
+            <Label text="Select Report Type:"/>
+            <ComboBox fx:id="reportTypeComboBox" promptText="Choose report type..."/>
+            <Button onAction="#fetchReportOnAction" text="Fetch Report"/>
         </VBox>
-    </children>
+
+        <TableView fx:id="reportTableView" prefHeight="200.0">
+            <columns>
+                <TableColumn fx:id="reportColumn1fxid" text="Column 1"/>
+                <TableColumn fx:id="reportColumn2fxid" text="Column 2"/>
+                <TableColumn fx:id="reportColumn3fxid" text="Column 3"/>
+                <TableColumn fx:id="reportColumn4fxid" text="Column 4"/>
+            </columns>
+        </TableView>
+    </VBox>
 </AnchorPane>

@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="project.padmaoilcompanyltd.MTrackProjectViewController"
-            prefHeight="400.0" prefWidth="600.0">
-    <children>
-        <Label text="Track Project Milestones" style="-fx-font-size: 18; -fx-background-color: yellow;"
-               AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-        <VBox spacing="10.0" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="10.0">
-            <Button text="Select Project" onAction="#selectProject" />
-            <Button text="View Milestones" onAction="#viewMilestones" />
-            <Button text="Generate Report" onAction="#generateReport" />
-        </VBox>
-    </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="project.padmaoilcompanyltd.MTrackProjectViewController">
 
+    <Label style="-fx-font-size: 18; -fx-background-color: yellow;" text="Track Project Milestones"
+           AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0"/>
+
+    <VBox spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+          AnchorPane.topAnchor="50.0">
+        <Label text="Generate By Due Date:"/>
+        <DatePicker fx:id="selectDateDatePicker" promptText="Select Date"/>
+        <Button onAction="#generateProjectReportOnAction" prefHeight="25.0" prefWidth="176.0" text="Generate By Date"/>
+        <Label text="Generate All Available Projects:"/>
+        <Button mnemonicParsing="false" onAction="#generateAllProjectReportOnAction" prefHeight="25.0" prefWidth="179.0"
+                text="Generate All"/>
+        <TableView fx:id="trackProjectTableView" prefHeight="200.0">
+            <columns>
+                <TableColumn text="Milestone ID"/>
+                <TableColumn text="Deadline"/>
+                <TableColumn text="Status"/>
+                <TableColumn text="Description"/>
+            </columns>
+        </TableView>
+    </VBox>
 </AnchorPane>

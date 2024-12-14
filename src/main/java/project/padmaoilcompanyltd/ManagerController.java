@@ -5,18 +5,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ManagerViewController {
+public class ManagerController {
 
     @javafx.fxml.FXML
-    private AnchorPane rightSplitPaneFxid;
+    private AnchorPane rightSplitPane;
     @javafx.fxml.FXML
-    private Button backfxiddd;
+    private AnchorPane fullAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -25,55 +24,57 @@ public class ManagerViewController {
     //fxml action events
     @javafx.fxml.FXML
     public void viewProductionButtonOnAction(ActionEvent actionEvent) {
+
         loadContent("MViewReportsView.fxml");
     }
 
     @javafx.fxml.FXML
     public void approveBudgetButtonOnAction(ActionEvent actionEvent) {
+
         loadContent("MApproveBudgetView.fxml");
     }
 
     @javafx.fxml.FXML
     public void approveTimeOffButtonOnAction(ActionEvent actionEvent) {
+
         loadContent("MApproveTimeOffView.fxml");
     }
 
     @javafx.fxml.FXML
     public void trackProjectButtonOnAction(ActionEvent actionEvent) {
+
         loadContent("MTrackProjectView.fxml");
     }
 
     @javafx.fxml.FXML
     public void assignTasksButtonOnAction(ActionEvent actionEvent) {
+
         loadContent("MAssignTasksView.fxml");
     }
 
     @javafx.fxml.FXML
     public void reviewSafetyButtonOnAction(ActionEvent actionEvent) {
+
         loadContent("MReviewSafetyView.fxml");
     }
 
     @javafx.fxml.FXML
     public void accessHRButtonOnAction(ActionEvent actionEvent) {
+
         loadContent("MAccessHRView.fxml");
     }
 
     @javafx.fxml.FXML
     public void holdMeetingsButtonOnAction(ActionEvent actionEvent) {
+
         loadContent("MHoldMeetingsView.fxml");
     }
 
     //back button
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("LoginView.fxml"));
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+        loadScene("LoginView.fxml");
     }
 
     //method to load content in right SplitPane
@@ -82,13 +83,23 @@ public class ManagerViewController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
             AnchorPane rightSplitPaneContent = loader.load();
 
-            rightSplitPaneFxid.getChildren().clear();
-            rightSplitPaneFxid.getChildren().add(rightSplitPaneContent);
+            rightSplitPane.getChildren().clear();
+            rightSplitPane.getChildren().add(rightSplitPaneContent);
 
-            AnchorPane.setTopAnchor(rightSplitPaneContent, 0.0);
-            AnchorPane.setBottomAnchor(rightSplitPaneContent, 0.0);
-            AnchorPane.setLeftAnchor(rightSplitPaneContent, 0.0);
-            AnchorPane.setRightAnchor(rightSplitPaneContent, 0.0);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //method to load scene in full AnchorPane
+    private void loadScene(String fxmlFile) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+            AnchorPane anchorPaneContent = loader.load();
+
+            fullAnchorPane.getChildren().clear();
+            fullAnchorPane.getChildren().add(anchorPaneContent);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

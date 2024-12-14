@@ -11,4 +11,13 @@
             fx:controller="project.padmaoilcompanyltd.HUpdateJobViewController"
             prefHeight="400.0" prefWidth="600.0">
 
+    <Label text="Update Job Postings" style="-fx-font-size: 18; -fx-background-color: yellow;"
+           AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"/>
+
+    <VBox spacing="10.0" AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"
+          AnchorPane.bottomAnchor="10.0">
+        <TextField fx:id="jobTitleField" promptText="Job Title"/>
+        <TextArea fx:id="jobDescriptionTextArea" promptText="Job Description"/>
+        <Button onAction="#saveJobPostingOnAction" text="Publish/Save"/>
+    </VBox>
 </AnchorPane>

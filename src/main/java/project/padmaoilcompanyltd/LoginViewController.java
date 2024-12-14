@@ -2,33 +2,38 @@ package project.padmaoilcompanyltd;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javafx.scene.layout.AnchorPane;
+
+import java.io.IOException;
 
 public class LoginViewController {
 
     @javafx.fxml.FXML
+    private AnchorPane fullAnchorPane;
+
+    @javafx.fxml.FXML
     public void managerButtonOnAction(ActionEvent actionEvent) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("ManagerView.fxml"));
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+        loadContent("Manager.fxml");
     }
 
     @javafx.fxml.FXML
     public void hrManagerButtonOnAction(ActionEvent actionEvent) {
+        
+        loadContent("HRManager.fxml");
+    }
+    
+    
+    //method to load content in right SplitPane
+    private void loadContent(String fxmlFile) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("HRManagerView.fxml"));
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (Exception e) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+            AnchorPane anchorPaneContent = loader.load();
+
+            fullAnchorPane.getChildren().clear();
+            fullAnchorPane.getChildren().add(anchorPaneContent);
+
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

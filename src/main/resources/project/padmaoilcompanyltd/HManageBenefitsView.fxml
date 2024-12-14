@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
@@ -11,4 +10,14 @@
             fx:controller="project.padmaoilcompanyltd.HManageBenefitsViewController"
             prefHeight="400.0" prefWidth="600.0">
 
+    <Label text="Manage Employee Benefits" style="-fx-font-size: 18; -fx-background-color: yellow;"
+           AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"/>
+
+    <ComboBox fx:id="benefitsComboBox" promptText="Select Benefit Type" AnchorPane.topAnchor="50.0"
+              AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"/>
+
+    <Button text="Update Benefits" onAction="#updateBenefitsOnAction" AnchorPane.topAnchor="100.0"
+            AnchorPane.leftAnchor="10.0"/>
+    <Button text="Enroll Employee" onAction="#enrollEmployeeOnAction" AnchorPane.topAnchor="150.0"
+            AnchorPane.leftAnchor="10.0"/>
 </AnchorPane>

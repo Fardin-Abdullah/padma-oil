@@ -11,4 +11,16 @@
             fx:controller="project.padmaoilcompanyltd.HProcessPayrollViewController"
             prefHeight="400.0" prefWidth="600.0">
 
+    <Label text="Process Payroll" style="-fx-font-size: 18; -fx-background-color: yellow;"
+           AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"/>
+
+    <ComboBox fx:id="payrollPeriodComboBox" promptText="Select Payroll Period" AnchorPane.topAnchor="50.0"
+              AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"/>
+
+    <Button text="Review Payroll Data" onAction="#reviewPayrollOnAction" AnchorPane.topAnchor="100.0"
+            AnchorPane.leftAnchor="10.0"/>
+    <Button text="Finalize Payroll" onAction="#finalizePayrollOnAction" AnchorPane.topAnchor="150.0"
+            AnchorPane.leftAnchor="10.0"/>
+    <Button text="Generate Payroll Reports" onAction="#generatePayrollReportOnAction" AnchorPane.topAnchor="200.0"
+            AnchorPane.leftAnchor="10.0"/>
 </AnchorPane>

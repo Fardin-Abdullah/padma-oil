@@ -11,4 +11,13 @@
             fx:controller="project.padmaoilcompanyltd.HEnforcePoliciesViewController"
             prefHeight="400.0" prefWidth="600.0">
 
+    <Label text="Enforce Workplace Policies" style="-fx-font-size: 18; -fx-background-color: yellow;"
+           AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"/>
+
+    <Button text="View Current Policies" onAction="#viewPoliciesOnAction" AnchorPane.topAnchor="50.0"
+            AnchorPane.leftAnchor="10.0"/>
+    <Button text="Update Policies" onAction="#updatePoliciesOnAction" AnchorPane.topAnchor="100.0"
+            AnchorPane.leftAnchor="10.0"/>
+    <Button text="Notify Employees" onAction="#notifyEmployeesOnAction" AnchorPane.topAnchor="150.0"
+            AnchorPane.leftAnchor="10.0"/>
 </AnchorPane>
