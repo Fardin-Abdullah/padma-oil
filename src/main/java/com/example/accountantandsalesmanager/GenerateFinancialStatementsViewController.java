@@ -1,54 +1,104 @@
 package com.example.accountantandsalesmanager;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableView;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.stage.FileChooser;
 
-public class GenerateFinancialStatementsViewController
-{
-    @javafx.fxml.FXML
-    private TableView financialStatementsTableView;
-    @javafx.fxml.FXML
-    private DatePicker EndDatePicker;
-    @javafx.fxml.FXML
+import java.io.File;
+import java.io.FileWriter;
+import java.time.LocalDate;
+
+public class GenerateFinancialStatementsViewController {
+
+    @FXML
+    private ComboBox<String> reportTypeComboBox;
+
+    @FXML
     private DatePicker startDatePicker;
-    @javafx.fxml.FXML
-    private ComboBox reportTypeComboBox;
-    @javafx.fxml.FXML
-    private AnchorPane generateFinancialStatementsAnchorPane;
 
-    @javafx.fxml.FXML
+    @FXML
+    private DatePicker endDatePicker;
+
+    @FXML
+    private TableView<FinancialStatementEntry> financialStatementsTableView;
+
+    @FXML
+    private TableColumn<FinancialStatementEntry, String> reportTypeTableColumn;
+
+    @FXML
+    private TableColumn<FinancialStatementEntry, String> dateRangeTableColumn;
+
+    private ObservableList<FinancialStatementEntry> financialStatementsData = FXCollections.observableArrayList();
+
+    @FXML
     public void initialize() {
+        reportTypeComboBox.setItems(FXCollections.observableArrayList("Balance Sheet", "Income Statement", "Cash Flow Statement"));
+        reportTypeTableColumn.setCellValueFactory(data -> data.getValue().reportTypeProperty());
+        dateRangeTableColumn.setCellValueFactory(data -> data.getValue().dateRangeProperty());
+        financialStatementsTableView.setItems(financialStatementsData);
     }
 
-    @javafx.fxml.FXML
-    public void financialReportGenerateButtonOnAction(ActionEvent actionEvent) {
+    @FXML
+    private void financialStatementsTableButtonOnAction() {
+        financialStatementsData.clear();
+        financialStatementsData.add(new FinancialStatementEntry("Balance Sheet", "2024-01-01 to 2024-12-31"));
+        financialStatementsData.add(new FinancialStatementEntry("Income Statement", "2024-01-01 to 2024-12-31"));
+        System.out.println("Financial Statements Table populated.");
     }
 
-    @javafx.fxml.FXML
-    public void exportReportButtonOnAction(ActionEvent actionEvent) {
-    }
+    @FXML
+    private void financialReportGenerateButtonOnAction() {
+        String reportType = reportTypeComboBox.getValue();
+        LocalDate startDate = startDatePicker.getValue();
+        LocalDate endDate = endDatePicker.getValue();
 
-    @javafx.fxml.FXML
-    public void financialStatementsTableButtonOnAction(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void backButtonOnAction(ActionEvent actionEvent) {
-        try{
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("AccountantDashboardView.fxml"));
-            Scene viewscene = new Scene(fxmlLoader.load());
-            Stage tempStage = (Stage)generateFinancialStatementsAnchorPane.getScene().getWindow();
-            tempStage.setTitle("Accountant Dashboard");
-            tempStage.setScene(viewscene);
-            tempStage.show();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        if (reportType == null || startDate == null || endDate == null) {
+            System.out.println("Please fill all the fields!");
+            return;
         }
+
+        String dateRange = startDate + " to " + endDate;
+        financialStatementsData.add(new FinancialStatementEntry(reportType, dateRange));
+        System.out.println("Financial report generated for: " + reportType + ", Date Range: " + dateRange);
+    }
+
+    @FXML
+    private void exportReportButtonOnAction() {
+        if (financialStatementsData.isEmpty()) {
+            System.out.println("No data to export!");
+            return;
+        }
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Save CSV Report");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("CSV Files", "*.csv"));
+        File csvFile = fileChooser.showSaveDialog(null);
+        if (csvFile == null) return;
+
+        try (FileWriter writer = new FileWriter(csvFile)) {
+            writer.append("Report Type,Date Range\n");
+            for (FinancialStatementEntry entry : financialStatementsData) {
+                writer.append(entry.getReportType()).append(",").append(entry.getDateRange()).append("\n");
+            }
+            System.out.println("CSV report exported successfully to: " + csvFile.getAbsolutePath());
+        } catch (Exception e) {
+            System.err.println("Error exporting CSV: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    private void backButtonOnAction() {
+
+    }
+
+    @FXML
+    private void clearButtonOnAction() {
+        reportTypeComboBox.setValue(null);
+        startDatePicker.setValue(null);
+        endDatePicker.setValue(null);
+        financialStatementsData.clear();
+        System.out.println("Fields and table cleared.");
     }
 }

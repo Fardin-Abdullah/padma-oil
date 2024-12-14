@@ -21,7 +21,7 @@
       </Label>
       <TableView fx:id="reconcileBankAccountsTableView" layoutY="333.0" prefHeight="200.0" prefWidth="625.0">
         <columns>
-          <TableColumn onEditStart="#dateTableColumn" prefWidth="113.3333410024643" text="Date" />
+          <TableColumn fx:id="dateTableColumn" prefWidth="113.3333410024643" text="Date" />
           <TableColumn fx:id="descriptionTableColumn" prefWidth="179.33330535888672" text="Description" />
             <TableColumn fx:id="amountTableColumn" prefWidth="185.3333740234375" text="Amount" />
             <TableColumn fx:id="statusTableColumn" prefWidth="146.00003051757812" text="Status" />

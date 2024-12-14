@@ -37,7 +37,7 @@ public class SchedeuleMeetingViewController
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("SalesManagerDashboardView.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
-            Stage tempStage = (Stage)shedulemeetingTableView.getScene().getWindow();
+            Stage tempStage = (Stage)schedeuleMeetingAnchorPane.getScene().getWindow();
             tempStage.setTitle("Sales Manager Dashboard");
             tempStage.setScene(viewscene);
             tempStage.show();

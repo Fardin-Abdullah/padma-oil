@@ -27,7 +27,7 @@ public class AccountantDashboardViewController
     public void manageAccountsReceivableMenuItemOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ManageAccountsRecievableView.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("ManageAccountsReceivableView.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)accountantDashboardViewAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
