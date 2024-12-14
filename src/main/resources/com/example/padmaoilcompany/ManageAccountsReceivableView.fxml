@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="manageAccReceivableAnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.padmaoilcompany.ManageAccountsReceivableViewController">
+   <children>
+      <Label layoutX="24.0" layoutY="85.0" text="Customer" />
+      <Label layoutX="25.0" layoutY="136.0" text="Invoice Number:" />
+      <Label layoutX="327.0" layoutY="85.0" text="Amount(Received(BDT):" />
+      <Label layoutX="24.0" layoutY="24.0" prefHeight="35.0" prefWidth="343.0" text="Manage Accounts Payable">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="customerSelectionComboBox" layoutX="130.0" layoutY="81.0" prefWidth="150.0" />
+      <TextField fx:id="invoiceNumberTextField" layoutX="130.0" layoutY="132.0" />
+      <TextField fx:id="amountTextField" layoutX="476.0" layoutY="81.0" />
+      <Button layoutX="24.0" layoutY="261.0" mnemonicParsing="false" onAction="#recordPaymentButtonOnAction" text="Record Payment" />
+      <TableView fx:id="manageAccountsPayableTableView" layoutY="326.0" prefHeight="209.0" prefWidth="673.0">
+         <columns>
+            <TableColumn fx:id="invoiceNumberTableColumn" prefWidth="105.33334064483643" text="Invoice Number" />
+            <TableColumn fx:id="customerNameTableColumn" prefWidth="108.66669464111328" text="Customer Name" />
+            <TableColumn fx:id="invoiceDateTableColumn" prefWidth="99.33329772949219" text="Invoice Date" />
+            <TableColumn fx:id="dueDateTableColumn" prefWidth="100.6666259765625" text="Due Date" />
+            <TableColumn fx:id="amountTableColumn" prefWidth="106.66671752929688" text="Amount" />
+            <TableColumn fx:id="paymentStatusTableColumn" prefWidth="144.6666259765625" text="Payment Status" />
+         </columns>
+      </TableView>
+      <Button layoutX="188.0" layoutY="293.0" mnemonicParsing="false" onAction="#showTableButtonOnAction" prefHeight="25.0" prefWidth="276.0" text="Show Table" />
+      <Button layoutX="152.0" layoutY="261.0" mnemonicParsing="false" onAction="#filterButtonOnAction" text="Filter" />
+      <Button layoutX="216.0" layoutY="261.0" mnemonicParsing="false" onAction="#resetButtonOnAction" text="Reset" />
+      <Label layoutX="22.0" layoutY="190.0" text="Invoice Due date" />
+      <DatePicker fx:id="invoiceDueDatePicker" layoutX="128.0" layoutY="186.0" />
+      <Button layoutX="286.0" layoutY="261.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
+   </children>
+</AnchorPane>

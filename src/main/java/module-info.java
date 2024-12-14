@@ -1,8 +1,9 @@
-module com.example.accountantandsalesmanager {
+module com.example.padmaoilcompany {
     requires javafx.controls;
     requires javafx.fxml;
+    requires jdk.compiler;
 
 
-    opens com.example.accountantandsalesmanager to javafx.fxml;
-    exports com.example.accountantandsalesmanager;
+    opens com.example.padmaoilcompany to javafx.fxml;
+    exports com.example.padmaoilcompany;
 }

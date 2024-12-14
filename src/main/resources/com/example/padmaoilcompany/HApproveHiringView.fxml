@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.padmaoilcompany.HApproveHiringViewController">
+
+    <Label style="-fx-font-size: 18; -fx-background-color: yellow;" text="Approve New Hires"
+           AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0"/>
+    <VBox layoutY="50.0" prefHeight="350.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+        <ListView fx:id="newHiresListView" prefHeight="343.0" prefWidth="580.0">
+            <VBox.margin>
+                <Insets left="10.0" right="10.0"/>
+            </VBox.margin>
+        </ListView>
+        <AnchorPane prefHeight="0.0" prefWidth="600.0">
+            <Button onAction="#approveButtonOnAction" text="Approve" AnchorPane.bottomAnchor="10.0"
+                    AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0"/>
+            <Button onAction="#rejectButtonOnAction" text="Reject" AnchorPane.bottomAnchor="10.0"
+                    AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0"/>
+        </AnchorPane>
+    </VBox>
+</AnchorPane>
