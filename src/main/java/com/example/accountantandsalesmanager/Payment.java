@@ -4,8 +4,8 @@ import java.time.LocalDate;
 
 public class Payment {
     private String paymentId;
-    private String type; // "Payable" or "Receivable"
-    private String entityName; // Supplier/Customer
+    private String type;
+    private String entityName;
     private double amount;
     private LocalDate dueDate;
     private boolean resolved;
@@ -70,7 +70,6 @@ public class Payment {
         this.resolved = resolved;
     }
 
-    // Methods
     public void processPayment() {
         this.resolved = true;
         System.out.println("Payment processed for: " + entityName);
@@ -78,7 +77,7 @@ public class Payment {
 
     public void recordPayment() {
         System.out.println("Payment recorded: " + this);
-        // Logic for recording payments
+
     }
 
     @Override

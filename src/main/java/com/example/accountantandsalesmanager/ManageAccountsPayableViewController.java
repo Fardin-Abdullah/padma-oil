@@ -4,8 +4,11 @@ import javafx.event.ActionEvent;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.time.LocalDate;
 
@@ -44,17 +47,17 @@ public class ManageAccountsPayableViewController {
     @FXML
     private TableColumn<PaymentRecord, String> paymentMethodTableColumn;
 
-    // Observable list to hold payment records
+
     private final ObservableList<PaymentRecord> paymentRecords = FXCollections.observableArrayList();
 
-    // Initialize method called after FXML is loaded
+
     @FXML
     public void initialize() {
-        // Set up ComboBox options
+
         vendorSelctionComboBox.setItems(FXCollections.observableArrayList("Vendor A", "Vendor B", "Vendor C"));
         paymentMethodComboBox.setItems(FXCollections.observableArrayList("Bank Transfer", "Cheque", "Cash"));
 
-        // Bind TableView columns to PaymentRecord properties
+
         invoiceNumTableColumn.setCellValueFactory(data -> data.getValue().invoiceNumberProperty());
         vendorNameTableColumn.setCellValueFactory(data -> data.getValue().vendorNameProperty());
         invoiceDateTableColumn.setCellValueFactory(data -> data.getValue().invoiceDateProperty());
@@ -62,8 +65,6 @@ public class ManageAccountsPayableViewController {
         amountTableColumn.setCellValueFactory(data -> data.getValue().paymentAmountProperty().asObject());
         paymentStatusTableColumn.setCellValueFactory(data -> data.getValue().paymentStatusProperty());
         paymentMethodTableColumn.setCellValueFactory(data -> data.getValue().paymentMethodProperty());
-
-        // Bind the data to the TableView
         manageAccountsPayableTableView.setItems(paymentRecords);
     }
 
@@ -83,7 +84,6 @@ public class ManageAccountsPayableViewController {
                 return;
             }
 
-            // Add new payment record
             PaymentRecord record = new PaymentRecord(invoiceNumber, vendor, LocalDate.now(), dueDate, paymentAmount, "Processed", paymentMethod);
             paymentRecords.add(record);
 
@@ -116,7 +116,16 @@ public class ManageAccountsPayableViewController {
 
     @FXML
     private void backButtonOnAction(ActionEvent event) {
-        // Handle navigation logic here
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("AccountantDashboardView.fxml"));
+            Scene viewscene = new Scene(fxmlLoader.load());
+            Stage tempStage = (Stage) manageAccPayableAnchorPane.getScene().getWindow();
+            tempStage.setTitle("Accountant Dashboard");
+            tempStage.setScene(viewscene);
+            tempStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         System.out.println("Back button clicked");
     }
 

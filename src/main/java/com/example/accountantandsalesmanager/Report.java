@@ -63,12 +63,12 @@ public class Report {
 
     public void generateReport() {
         System.out.println("Generating report for: " + type);
-        // Logic for fetching data and populating `data` map
+
     }
 
     public void exportReport(String format) {
         System.out.println("Exporting report to: " + format);
-        // Logic to export data to the chosen format
+
     }
 
 

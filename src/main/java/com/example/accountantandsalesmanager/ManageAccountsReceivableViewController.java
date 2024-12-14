@@ -1,10 +1,13 @@
 package com.example.accountantandsalesmanager;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.stage.Stage;
 
 import java.time.LocalDate;
 
@@ -35,15 +38,13 @@ public class ManageAccountsReceivableViewController
     @javafx.fxml.FXML
     private AnchorPane manageAccReceivableAnchorPane;
 
-    // ObservableList to hold data for the table view
     private ObservableList<Invoice> invoiceList = FXCollections.observableArrayList();
 
     @javafx.fxml.FXML
     public void initialize() {
-        // Example setup: Populate customer combo box and table columns
+
         customerSelectionComboBox.setItems(FXCollections.observableArrayList("Customer 1", "Customer 2", "Customer 3"));
 
-        // Example table column setup (assuming Invoice class has getter methods)
         invoiceNumberTableColumn.setCellValueFactory(cellData -> cellData.getValue().invoiceNumberProperty());
         customerNameTableColumn.setCellValueFactory(cellData -> cellData.getValue().customerNameProperty());
         amountTableColumn.setCellValueFactory(cellData -> cellData.getValue().amountProperty().asObject()); // Use asObject for DoubleProperty
@@ -53,7 +54,7 @@ public class ManageAccountsReceivableViewController
 
     @javafx.fxml.FXML
     public void resetButtonOnAction(ActionEvent actionEvent) {
-        // Reset text fields and date picker
+
         invoiceNumberTextField.clear();
         amountTextField.clear();
         invoiceDueDatePicker.setValue(null);
@@ -62,21 +63,20 @@ public class ManageAccountsReceivableViewController
 
     @javafx.fxml.FXML
     public void recordPaymentButtonOnAction(ActionEvent actionEvent) {
-        // Validate fields
+
         String invoiceNumber = invoiceNumberTextField.getText();
         String amountStr = amountTextField.getText();
         String customerName = customerSelectionComboBox.getValue();
-        String paymentStatus = "Paid";  // Assuming payment status is 'Paid' after payment
-
+        String paymentStatus = "Paid";
         if (invoiceNumber.isEmpty() || amountStr.isEmpty() || customerName == null) {
-            // Show an error if necessary fields are missing
+
             showAlert("Error", "Please fill in all the fields.");
             return;
         }
 
         double amount = Double.parseDouble(amountStr);
 
-        // Find the invoice from the list
+
         Invoice selectedInvoice = null;
         for (Invoice invoice : invoiceList) {
             if (invoice.getInvoiceNumber().equals(invoiceNumber)) {
@@ -86,7 +86,6 @@ public class ManageAccountsReceivableViewController
         }
 
         if (selectedInvoice != null) {
-            // Record payment and update status
             selectedInvoice.setPaymentStatus(paymentStatus);
             selectedInvoice.setAmount(amount);  // Update amount if necessary
             manageAccountsPayableTableView.refresh();  // Refresh the table
@@ -98,13 +97,21 @@ public class ManageAccountsReceivableViewController
 
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent) {
-        // Handle navigation (e.g., go back to the previous screen)
-        System.out.println("Back button clicked.");
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("AccountantDashboardView.fxml"));
+            Scene viewscene = new Scene(fxmlLoader.load());
+            Stage tempStage = (Stage) manageAccReceivableAnchorPane.getScene().getWindow();
+            tempStage.setTitle("Accountant Dashboard");
+            tempStage.setScene(viewscene);
+            tempStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML
     public void filterButtonOnAction(ActionEvent actionEvent) {
-        // Example of applying a filter
+
         String filter = invoiceNumberTextField.getText();
         ObservableList<Invoice> filteredList = FXCollections.observableArrayList();
 
@@ -119,7 +126,7 @@ public class ManageAccountsReceivableViewController
 
     @javafx.fxml.FXML
     public void showTableButtonOnAction(ActionEvent actionEvent) {
-        // Refresh table to show all data
+
         manageAccountsPayableTableView.setItems(invoiceList);
     }
 

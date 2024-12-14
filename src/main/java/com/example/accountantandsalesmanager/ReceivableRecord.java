@@ -21,7 +21,7 @@ public class ReceivableRecord {
         this.paymentStatus = new SimpleStringProperty(paymentStatus);
     }
 
-    // Getters and setters for properties
+
     public StringProperty invoiceNumberProperty() { return invoiceNumber; }
     public StringProperty customerNameProperty() { return customerName; }
     public ObjectProperty<LocalDate> invoiceDateProperty() { return invoiceDate; }

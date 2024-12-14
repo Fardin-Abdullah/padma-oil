@@ -32,5 +32,6 @@
       <Label layoutX="14.0" layoutY="158.0" text="Company:" />
       <Button layoutX="414.0" layoutY="154.0" mnemonicParsing="false" onAction="#saveLeadButtonOnAction" text="Save Lead" />
       <Button layoutX="15.0" layoutY="562.0" mnemonicParsing="false" onAction="#backButtonOnAction" text="Back" />
+      <Button layoutX="232.0" layoutY="288.0" mnemonicParsing="false" onAction="#showTableButtonOnAction" text="Show Table" />
    </children>
 </AnchorPane>

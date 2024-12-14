@@ -1,119 +1,102 @@
 package com.example.accountantandsalesmanager;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class GenerateSalesLeadViewController {
 
-    // FXML fields representing the UI elements
-    @javafx.fxml.FXML
+    @FXML
     private TextField leadNameTextField;
 
-    @javafx.fxml.FXML
-    private TableView<Lead> leadManagementTableView;
-
-    @javafx.fxml.FXML
-    private TableColumn<Lead, String> nameTableColumn;
-
-    @javafx.fxml.FXML
-    private TableColumn<Lead, String> companyTableColumn;
-
-    @javafx.fxml.FXML
+    @FXML
     private TextField contactInfoTextField;
 
-    @javafx.fxml.FXML
+    @FXML
     private TextField companyNameTextField;
 
-    @javafx.fxml.FXML
+    @FXML
+    private TableView<Lead> leadManagementTableView;
+
+    @FXML
     private TableColumn<Lead, String> leadIdTableColumn;
 
-    @javafx.fxml.FXML
+    @FXML
+    private TableColumn<Lead, String> nameTableColumn;
+
+    @FXML
+    private TableColumn<Lead, String> companyTableColumn;
+
+    @FXML
     private TableColumn<Lead, String> contactInfoTableColumn;
 
-    @javafx.fxml.FXML
+    @FXML
     private AnchorPane generateSalesLeadAnchorPane;
 
-    // List to store leads in memory
-    private List<Lead> leadList = new ArrayList<>();
+    private ObservableList<Lead> salesLeadsData = FXCollections.observableArrayList();
 
-    // Initialize method for setting up the table columns, if needed
-    @javafx.fxml.FXML
+    private int leadCounter = 1;
+
+    @FXML
     public void initialize() {
-        nameTableColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
-        companyTableColumn.setCellValueFactory(cellData -> cellData.getValue().companyProperty());
-        contactInfoTableColumn.setCellValueFactory(cellData -> cellData.getValue().contactInfoProperty());
-
-        // Load any existing leads (if any)
-        leadManagementTableView.getItems().addAll(leadList);
+        leadIdTableColumn.setCellValueFactory(data -> data.getValue().idProperty());
+        nameTableColumn.setCellValueFactory(data -> data.getValue().nameProperty());
+        companyTableColumn.setCellValueFactory(data -> data.getValue().companyProperty());
+        contactInfoTableColumn.setCellValueFactory(data -> data.getValue().contactInfoProperty());
+        leadManagementTableView.setItems(salesLeadsData);
     }
 
-    // Action method for saving a new lead
-    @javafx.fxml.FXML
+    @FXML
+    public void addNewLeadButtonOnAction(ActionEvent actionEvent) {
+        leadNameTextField.clear();
+        contactInfoTextField.clear();
+        companyNameTextField.clear();
+        System.out.println("Ready to add a new lead.");
+    }
+
+    @FXML
     public void saveLeadButtonOnAction(ActionEvent actionEvent) {
         String name = leadNameTextField.getText();
         String contactInfo = contactInfoTextField.getText();
         String company = companyNameTextField.getText();
 
         if (name.isEmpty() || contactInfo.isEmpty() || company.isEmpty()) {
-            // Alert the user if any field is empty
-            showAlert(AlertType.ERROR, "Input Error", "Please fill in all fields before saving.");
+            System.out.println("Please fill all the fields before saving!");
             return;
         }
 
-        // Create a new Lead object
-        Lead newLead = new Lead(name, contactInfo, company);
+        Lead newLead = new Lead(String.valueOf(leadCounter++), name, company, contactInfo, "", "", "");
+        salesLeadsData.add(newLead);
 
-        // Add the new lead to the list and table view
-        leadList.add(newLead);
-        leadManagementTableView.getItems().add(newLead);
-
-        // Clear the input fields after saving
         leadNameTextField.clear();
         contactInfoTextField.clear();
         companyNameTextField.clear();
+
+        System.out.println("Lead saved successfully: " + newLead);
     }
 
-    // Action method for adding a new lead (clearing the fields for a new entry)
-    @javafx.fxml.FXML
-    public void addNewLeadButtonOnAction(ActionEvent actionEvent) {
-        leadNameTextField.clear();
-        contactInfoTextField.clear();
-        companyNameTextField.clear();
+    @FXML
+    public void showTableButtonOnAction(ActionEvent actionEvent) {
+        System.out.println("Displaying the current leads in the table.");
     }
 
-    // Action method for going back to the dashboard
-    @javafx.fxml.FXML
+    @FXML
     public void backButtonOnAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("SalesManagerDashboardView.fxml"));
-            Scene viewscene = new Scene(fxmlLoader.load());
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("AccountantDashboardView.fxml"));
+            Scene viewScene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage) generateSalesLeadAnchorPane.getScene().getWindow();
-            tempStage.setTitle("Sales Manager Dashboard");
-            tempStage.setScene(viewscene);
+            tempStage.setTitle("Accountant Dashboard");
+            tempStage.setScene(viewScene);
             tempStage.show();
         } catch (Exception e) {
-            showAlert(AlertType.ERROR, "Navigation Error", "Failed to navigate back to the dashboard.");
+            throw new RuntimeException("Failed to navigate back to Accountant Dashboard.", e);
         }
-    }
-
-    // Utility method to show alert messages
-    private void showAlert(AlertType type, String title, String message) {
-        Alert alert = new Alert(type);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
     }
 }

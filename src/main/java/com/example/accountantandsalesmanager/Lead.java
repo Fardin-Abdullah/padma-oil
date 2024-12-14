@@ -4,70 +4,89 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Lead {
-    private final StringProperty leadId;
+    private final StringProperty id;
     private final StringProperty name;
-    private final StringProperty contactInfo;
     private final StringProperty company;
+    private final StringProperty contactInfo;
+    private final StringProperty budget;
+    private final StringProperty decisionMaker;
+    private final StringProperty status;
 
-    // Constructor
-    public Lead(String name, String contactInfo, String company) {
-        this.leadId = new SimpleStringProperty("L" + System.currentTimeMillis()); // Generate a unique ID
+    public Lead(String id, String name, String company, String contactInfo, String budget, String decisionMaker, String status) {
+        this.id = new SimpleStringProperty(id);
         this.name = new SimpleStringProperty(name);
-        this.contactInfo = new SimpleStringProperty(contactInfo);
         this.company = new SimpleStringProperty(company);
+        this.contactInfo = new SimpleStringProperty(contactInfo);
+        this.budget = new SimpleStringProperty(budget);
+        this.decisionMaker = new SimpleStringProperty(decisionMaker);
+        this.status = new SimpleStringProperty(status);
     }
 
-    // Getters for the properties
-    public String getLeadId() {
-        return leadId.get();
-    }
-
-    public void setLeadId(String leadId) {
-        this.leadId.set(leadId);
-    }
-
-    public StringProperty leadIdProperty() {
-        return leadId;
-    }
-
-    public String getName() {
-        return name.get();
-    }
-
-    public void setName(String name) {
-        this.name.set(name);
+    public StringProperty idProperty() {
+        return id;
     }
 
     public StringProperty nameProperty() {
         return name;
     }
 
-    public String getContactInfo() {
-        return contactInfo.get();
-    }
-
-    public void setContactInfo(String contactInfo) {
-        this.contactInfo.set(contactInfo);
+    public StringProperty companyProperty() {
+        return company;
     }
 
     public StringProperty contactInfoProperty() {
         return contactInfo;
     }
 
+    public StringProperty budgetProperty() {
+        return budget;
+    }
+
+    public StringProperty decisionMakerProperty() {
+        return decisionMaker;
+    }
+
+    public StringProperty statusProperty() {
+        return status;
+    }
+
+    public String getId() {
+        return id.get();
+    }
+
+    public String getName() {
+        return name.get();
+    }
+
     public String getCompany() {
         return company.get();
     }
 
-    public void setCompany(String company) {
-        this.company.set(company);
+    public String getContactInfo() {
+        return contactInfo.get();
     }
 
-    public StringProperty companyProperty() {
-        return company;
+    public String getBudget() {
+        return budget.get();
     }
 
-    @Override
-    public String toString() {
-        return "Lead ID: " + leadId.get() + ", Name: " + name.get() + ", Company: " + company.get() + ", Contact: " + contactInfo.get();
+    public String getDecisionMaker() {
+        return decisionMaker.get();
+    }
+
+    public String getStatus() {
+        return status.get();
+    }
+
+    public void setBudget(String budget) {
+        this.budget.set(budget);
+    }
+
+    public void setDecisionMaker(String decisionMaker) {
+        this.decisionMaker.set(decisionMaker);
+    }
+
+    public void setStatus(String status) {
+        this.status.set(status);
     }
 }

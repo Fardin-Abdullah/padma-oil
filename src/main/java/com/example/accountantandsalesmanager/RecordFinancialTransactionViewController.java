@@ -44,18 +44,13 @@ public class RecordFinancialTransactionViewController {
 
     @javafx.fxml.FXML
     public void initialize() {
-        // Initialize ComboBox options
         transactionTypeComboBox.setItems(FXCollections.observableArrayList("Income", "Expense"));
         paymentMethodComboBox.setItems(FXCollections.observableArrayList("Cash", "Card", "Bank Transfer"));
-
-        // Set up TableView columns
         transactionTypeTableColumn.setCellValueFactory(new PropertyValueFactory<>("transactionType"));
         descriptionTableColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
         amountTableColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
         paymentMethodTableColumn.setCellValueFactory(new PropertyValueFactory<>("paymentMethod"));
         transactionDateTableColumn.setCellValueFactory(new PropertyValueFactory<>("transactionDate"));
-
-        // Bind the transactions list to the TableView
         financialTransaxtionTableView.setItems(transactions);
     }
 

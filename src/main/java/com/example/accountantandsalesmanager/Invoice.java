@@ -10,7 +10,14 @@ public class Invoice {
     private final ObjectProperty<LocalDate> dueDate;
     private final StringProperty paymentStatus;
 
-    // Constructor
+    public Invoice() {
+        this.invoiceNumber = new SimpleStringProperty();
+        this.customerName = new SimpleStringProperty();
+        this.amount = new SimpleDoubleProperty();
+        this.dueDate = new SimpleObjectProperty<>();
+        this.paymentStatus = new SimpleStringProperty();
+    }
+
     public Invoice(String invoiceNumber, String customerName, double amount, LocalDate dueDate, String paymentStatus) {
         this.invoiceNumber = new SimpleStringProperty(invoiceNumber);
         this.customerName = new SimpleStringProperty(customerName);
@@ -19,13 +26,8 @@ public class Invoice {
         this.paymentStatus = new SimpleStringProperty(paymentStatus);
     }
 
-    // Getters and setters
     public String getInvoiceNumber() {
         return invoiceNumber.get();
-    }
-
-    public void setInvoiceNumber(String invoiceNumber) {
-        this.invoiceNumber.set(invoiceNumber);
     }
 
     public StringProperty invoiceNumberProperty() {
@@ -36,20 +38,12 @@ public class Invoice {
         return customerName.get();
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName.set(customerName);
-    }
-
     public StringProperty customerNameProperty() {
         return customerName;
     }
 
     public double getAmount() {
         return amount.get();
-    }
-
-    public void setAmount(double amount) {
-        this.amount.set(amount);
     }
 
     public DoubleProperty amountProperty() {
@@ -60,10 +54,6 @@ public class Invoice {
         return dueDate.get();
     }
 
-    public void setDueDate(LocalDate dueDate) {
-        this.dueDate.set(dueDate);
-    }
-
     public ObjectProperty<LocalDate> dueDateProperty() {
         return dueDate;
     }
@@ -72,23 +62,26 @@ public class Invoice {
         return paymentStatus.get();
     }
 
-    public void setPaymentStatus(String paymentStatus) {
-        this.paymentStatus.set(paymentStatus);
-    }
-
     public StringProperty paymentStatusProperty() {
         return paymentStatus;
     }
 
-    // Optional: To string for easy printing
     @Override
     public String toString() {
         return "Invoice{" +
-                "invoiceNumber='" + invoiceNumber.get() + '\'' +
-                ", customerName='" + customerName.get() + '\'' +
+                "invoiceNumber=" + invoiceNumber.get() +
+                ", customerName=" + customerName.get() +
                 ", amount=" + amount.get() +
                 ", dueDate=" + dueDate.get() +
-                ", paymentStatus='" + paymentStatus.get() + '\'' +
+                ", paymentStatus=" + paymentStatus.get() +
                 '}';
+    }
+
+    public void setPaymentStatus(String paymentStatus) {
+        this.paymentStatus.set(paymentStatus);
+    }
+
+    public void setAmount(double amount) {
+        this.amount.set(amount);
     }
 }

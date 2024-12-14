@@ -20,7 +20,7 @@ public class Transaction {
         this.amount = amount;
     }
 
-    // Getters and setters
+
     public String getDescription() {
         return description;
     }
