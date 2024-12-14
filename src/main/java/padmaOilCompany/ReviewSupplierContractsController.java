@@ -1,10 +1,11 @@
-package padmaOilCompany.supplyChainManager;
+package padmaOilCompany;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
 
 public class ReviewSupplierContractsController
 {
@@ -38,6 +39,8 @@ public class ReviewSupplierContractsController
     private TableColumn deliveryTermsManagementTableColumn;
     @javafx.fxml.FXML
     private TableColumn contractEndManagementTableColumn;
+    @javafx.fxml.FXML
+    private AnchorPane contractManagementSystemAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -49,5 +52,9 @@ public class ReviewSupplierContractsController
 
     @javafx.fxml.FXML
     public void SaveChangeManagementButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backManagementButtonOnAction(ActionEvent actionEvent) {
     }
 }

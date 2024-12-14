@@ -64,5 +64,6 @@
       <TextField fx:id="FindingsComplaintTextField" layoutX="392.0" layoutY="341.0" prefHeight="113.0" prefWidth="251.0" />
       <TextField fx:id="investigationNameTextField" layoutX="159.0" layoutY="420.0" />
       <DatePicker fx:id="investigationDateComplaintDatePicker" layoutX="159.0" layoutY="360.0" />
+      <Button layoutX="29.0" layoutY="472.0" mnemonicParsing="false" onAction="#backComplaintButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

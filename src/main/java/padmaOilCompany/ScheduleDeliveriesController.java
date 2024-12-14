@@ -1,7 +1,8 @@
-package padmaOilCompany.supplyChainManager;
+package padmaOilCompany;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 
 public class ScheduleDeliveriesController
 {
@@ -23,6 +24,8 @@ public class ScheduleDeliveriesController
     private TableColumn destinationScheduleTableColumn;
     @javafx.fxml.FXML
     private TableView scheduleDeliveryTableView;
+    @javafx.fxml.FXML
+    private AnchorPane scheduleDeliveriesAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -30,5 +33,9 @@ public class ScheduleDeliveriesController
 
     @javafx.fxml.FXML
     public void ComfirmScheduleScheduleButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backDeliveriesButtonOnAction(ActionEvent actionEvent) {
     }
 }

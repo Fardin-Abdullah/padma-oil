@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="555.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.supplyChainManager.ScheduleDeliveriesController">
+<AnchorPane fx:id="scheduleDeliveriesAnchorPane" prefHeight="555.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.ScheduleDeliveriesController">
    <children>
       <Label layoutX="186.0" layoutY="14.0" prefHeight="65.0" prefWidth="237.0" text="Schedule Deliveries">
          <font>
@@ -59,5 +59,6 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
+      <Button layoutX="551.0" layoutY="497.0" mnemonicParsing="false" onAction="#backDeliveriesButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="585.0" prefWidth="721.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.ReportNonCompliantProductsController">
+<AnchorPane prefHeight="603.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.qualityControlManager.ReportNonCompliantProductsController">
    <children>
       <Label fx:id="NonCompliance" layoutX="190.0" layoutY="14.0" prefHeight="42.0" prefWidth="288.0" text="Non-Compliance Section">
          <font>
@@ -54,5 +54,6 @@
         </columns>
       </TableView>
       <Button layoutX="584.0" layoutY="44.0" mnemonicParsing="false" onAction="#searchNonComplianceButtonOnAction" text="Search" />
+      <Button layoutX="637.0" layoutY="564.0" mnemonicParsing="false" onAction="#backNonComplianceButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

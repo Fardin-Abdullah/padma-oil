@@ -103,5 +103,6 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </RadioButton>
+      <Button layoutX="47.0" layoutY="557.0" mnemonicParsing="false" onAction="#backMetricsButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

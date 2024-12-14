@@ -1,7 +1,8 @@
-package padmaOilCompany.supplyChainManager;
+package padmaOilCompany;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 
 public class OptimizeSupplyChainRoutesController
 {
@@ -33,6 +34,8 @@ public class OptimizeSupplyChainRoutesController
     private ComboBox routeToComboBox;
     @javafx.fxml.FXML
     private TableColumn routeFromOptimizationTableColumn;
+    @javafx.fxml.FXML
+    private AnchorPane routeOptimizationAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -44,5 +47,9 @@ public class OptimizeSupplyChainRoutesController
 
     @javafx.fxml.FXML
     public void searchRouteButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backRouteButtonOnAction(ActionEvent actionEvent) {
     }
 }

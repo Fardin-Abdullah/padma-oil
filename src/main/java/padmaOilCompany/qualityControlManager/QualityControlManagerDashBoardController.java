@@ -1,9 +1,13 @@
 package padmaOilCompany.qualityControlManager;
 
 import javafx.event.ActionEvent;
+import javafx.scene.layout.AnchorPane;
 
 public class QualityControlManagerDashBoardController
 {
+    @javafx.fxml.FXML
+    private AnchorPane qualityControlManagementAnchorPane;
+
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -16,8 +20,8 @@ public class QualityControlManagerDashBoardController
     public void conductSupplierAuditsButtonOnAction(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
-    public void performRandomBatchInspectionButtonOnActio(ActionEvent actionEvent) {
+    @Deprecated
+    public void performRandomBatchInspectionButtonOnAction(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -42,5 +46,9 @@ public class QualityControlManagerDashBoardController
 
     @javafx.fxml.FXML
     public void investigateProductComplaintsButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void performRandomBatchInspectionButtonOnActio(ActionEvent actionEvent) {
     }
 }

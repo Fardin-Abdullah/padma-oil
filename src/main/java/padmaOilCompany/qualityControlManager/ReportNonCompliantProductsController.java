@@ -45,4 +45,8 @@ public class ReportNonCompliantProductsController
     @javafx.fxml.FXML
     public void submitReportNonComplianceButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backNonComplianceButtonOnAction(ActionEvent actionEvent) {
+    }
 }

@@ -1,10 +1,11 @@
-package padmaOilCompany.supplyChainManager;
+package padmaOilCompany;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
 
 public class ManageInventoryLevelsController
 {
@@ -34,6 +35,8 @@ public class ManageInventoryLevelsController
     private TableView managingInventoryLevel2TableView;
     @javafx.fxml.FXML
     private ComboBox qualityInvertoryComboBox;
+    @javafx.fxml.FXML
+    private AnchorPane managingInventoryLevelsAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -41,5 +44,9 @@ public class ManageInventoryLevelsController
 
     @javafx.fxml.FXML
     public void confirmOrderSubmissionButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backInventoryButtonOnAction(ActionEvent actionEvent) {
     }
 }

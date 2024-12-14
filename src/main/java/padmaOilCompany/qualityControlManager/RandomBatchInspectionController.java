@@ -63,4 +63,8 @@ public class RandomBatchInspectionController
     @javafx.fxml.FXML
     public void showNewDataRandomBatchButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backInspectionButtonOnAction(ActionEvent actionEvent) {
+    }
 }

@@ -37,4 +37,8 @@ public class ConductSupplierAuditsController
     @javafx.fxml.FXML
     public void saveAuditInformationButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backAuditButtonOnAction(ActionEvent actionEvent) {
+    }
 }

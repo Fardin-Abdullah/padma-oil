@@ -1,10 +1,11 @@
-package padmaOilCompany.supplyChainManager;
+package padmaOilCompany;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
 
 public class SupplyChainReportsController
 {
@@ -24,6 +25,8 @@ public class SupplyChainReportsController
     private ComboBox selectedReportingPeriodChainReportsComboBox;
     @javafx.fxml.FXML
     private TableColumn inventoryLevelsChainReportsTableColumn;
+    @javafx.fxml.FXML
+    private AnchorPane supplyChainReportAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -39,5 +42,9 @@ public class SupplyChainReportsController
 
     @javafx.fxml.FXML
     public void selectAndProcessChainReportsBttonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backReportButtonOnAction(ActionEvent actionEvent) {
     }
 }

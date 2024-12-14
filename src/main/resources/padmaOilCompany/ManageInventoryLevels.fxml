@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="539.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.supplyChainManager.ManageInventoryLevelsController">
+<AnchorPane fx:id="managingInventoryLevelsAnchorPane" prefHeight="539.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.ManageInventoryLevelsController">
    <children>
       <Label layoutX="183.0" layoutY="14.0" text="Managing Inventory Levels">
          <font>
@@ -70,5 +70,6 @@
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Button>
+      <Button layoutX="563.0" layoutY="493.0" mnemonicParsing="false" onAction="#backInventoryButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

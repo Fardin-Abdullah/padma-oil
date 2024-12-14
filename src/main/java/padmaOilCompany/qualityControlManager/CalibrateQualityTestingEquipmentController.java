@@ -53,4 +53,8 @@ public class CalibrateQualityTestingEquipmentController
     @javafx.fxml.FXML
     public void verifyAccuracyYESButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backCalibrationButtonOnAction(ActionEvent actionEvent) {
+    }
 }

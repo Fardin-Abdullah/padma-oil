@@ -72,5 +72,6 @@
       <TextField fx:id="auditLocationTextField" layoutX="152.0" layoutY="416.0" />
       <TextField fx:id="auditorNameAuditTextField" layoutX="152.0" layoutY="460.0" />
       <TextField fx:id="keyIssuesAuditTextField" layoutX="512.0" layoutY="385.0" />
+      <Button layoutX="601.0" layoutY="486.0" mnemonicParsing="false" onAction="#backAuditButtonOnAction" text="Back" />
    </children>
 </AnchorPane>

@@ -1,8 +1,10 @@
-package padmaOilCompany.supplyChainManager;
+package padmaOilCompany;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 public class MonitorOilShipmentsController
 {
@@ -18,13 +20,19 @@ public class MonitorOilShipmentsController
     @javafx.fxml.FXML
     private TableColumn currentStatusStatusTableColumn;
     @javafx.fxml.FXML
-    private TableColumn locationTableColumn;
-    @javafx.fxml.FXML
     private TextField shipmentIdTextField;
     @javafx.fxml.FXML
     private TableColumn shipmentIdStatusTableColumn;
     @javafx.fxml.FXML
     private TableColumn lastKnownLocationTableColumn;
+    @javafx.fxml.FXML
+    private TableColumn locationStatusTableColumn;
+    @javafx.fxml.FXML
+    private TableView shipmentDetailsTableView;
+    @javafx.fxml.FXML
+    private TableView shipmentStatusSectionTableView;
+    @javafx.fxml.FXML
+    private AnchorPane monitorOilShipmentsAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -44,5 +52,9 @@ public class MonitorOilShipmentsController
 
     @javafx.fxml.FXML
     public void refreshButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backShipmentButtonOnAction(ActionEvent actionEvent) {
     }
 }

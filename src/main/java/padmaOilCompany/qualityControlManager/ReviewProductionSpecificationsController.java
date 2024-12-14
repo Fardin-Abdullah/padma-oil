@@ -38,4 +38,8 @@ public class ReviewProductionSpecificationsController
     @javafx.fxml.FXML
     public void checkReviewButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backReviewButtonOnAction(ActionEvent actionEvent) {
+    }
 }

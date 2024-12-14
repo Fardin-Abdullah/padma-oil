@@ -52,4 +52,8 @@ public class EnsureProductQualityComplianceController
     @javafx.fxml.FXML
     public void checkResultQualityButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backQualityButtonOnAction(ActionEvent actionEvent) {
+    }
 }

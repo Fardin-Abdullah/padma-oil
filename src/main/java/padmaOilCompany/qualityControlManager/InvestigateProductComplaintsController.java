@@ -35,4 +35,8 @@ public class InvestigateProductComplaintsController
     @javafx.fxml.FXML
     public void searchComplainButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backComplaintButtonOnAction(ActionEvent actionEvent) {
+    }
 }

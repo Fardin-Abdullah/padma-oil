@@ -51,4 +51,8 @@ public class TrackQualityMetricsTrackQualityMetricsController
     @javafx.fxml.FXML
     public void downloadPerformanceQualityMetricsButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backMetricsButtonOnAction(ActionEvent actionEvent) {
+    }
 }

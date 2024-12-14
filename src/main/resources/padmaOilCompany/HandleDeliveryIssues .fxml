@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane onMouseClicked="#jhvyh" prefHeight="540.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.supplyChainManager.HandleDeliveryIssuesController">
+<AnchorPane fx:id="reportDeliveryIssuesAnchorPane" onMouseClicked="#jhvyh" prefHeight="540.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.HandleDeliveryIssuesController">
    <children>
       <Label layoutX="209.0" layoutY="14.0" prefHeight="59.0" prefWidth="268.0" text="Report Delivery Issues.">
          <font>
@@ -44,5 +44,6 @@
       </Label>
       <TextField fx:id="describtionTextField" layoutX="119.0" layoutY="298.0" prefHeight="172.0" prefWidth="546.0" />
       <Button layoutX="497.0" layoutY="489.0" mnemonicParsing="false" onAction="#submitIssueResolutionButtonOnAction" prefHeight="25.0" prefWidth="156.0" text="Submit Issue Resolution" />
+      <Button layoutX="14.0" layoutY="489.0" mnemonicParsing="false" onAction="#backIssuesButtonOnAction" prefHeight="25.0" prefWidth="71.0" text="Back" />
    </children>
 </AnchorPane>
