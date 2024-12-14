@@ -23,7 +23,7 @@ public class ReviewProductionSpecificationsController
     @javafx.fxml.FXML
     private TextField currentStatusReviewTextField;
     @javafx.fxml.FXML
-    private ComboBox productCalegoryReviewComboBOx;
+    private ComboBox<String> productCalegoryReviewComboBOx;
     @javafx.fxml.FXML
     private TableColumn currentStatusReviewTableColumn;
     @javafx.fxml.FXML
@@ -35,7 +35,9 @@ public class ReviewProductionSpecificationsController
 
     @javafx.fxml.FXML
     public void initialize() {
+        productCalegoryReviewComboBOx.getItems().addAll("A","B","C","D");
     }
+
 
     @javafx.fxml.FXML
     public void saveChangeReviewButtonOnAction(ActionEvent actionEvent) {
@@ -49,7 +51,7 @@ public class ReviewProductionSpecificationsController
     public void backReviewButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(ReviewProductionSpecificationsController.class.getResource("/padmaOilCompany/QualityControlManager/QualityControlManagerDashBoard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(ReviewProductionSpecificationsController.class.getResource("/padmaOilCompany/QualityControlManagerDashBoard.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)reviewProductSpecificationAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());

@@ -3,10 +3,7 @@ package padmaOilCompany;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -20,7 +17,7 @@ public class CoordinateWithSuppliersController
     @javafx.fxml.FXML
     private TableColumn supplierNameTableColumn;
     @javafx.fxml.FXML
-    private ComboBox selectSuppliersComboBox;
+    private ComboBox<String> selectSuppliersComboBox;
     @javafx.fxml.FXML
     private TextField contextTextField;
     @javafx.fxml.FXML
@@ -36,11 +33,40 @@ public class CoordinateWithSuppliersController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        selectSuppliersComboBox.getItems().addAll("A","B","C","D");
     }
 
     @javafx.fxml.FXML
     public void sendButtonOnAction(ActionEvent actionEvent) {
+        String to = toTextfield.getText();
+        String from = fromTextField.getText();
+        String context = contextTextField.getText();
+        String selectedSupplier = selectSuppliersComboBox.getValue();
+
+        if (to.isEmpty() || from.isEmpty() || context.isEmpty() || selectedSupplier == null) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Please fill in all fields and select a supplier.");
+            alert.show();
+            return;
+        }
+
+        System.out.println("Sending message to supplier:");
+        System.out.println("To: " + to);
+        System.out.println("From: " + from);
+        System.out.println("Context: " + context);
+        System.out.println("Selected Supplier: " + selectedSupplier);
+
+        toTextfield.clear();
+        fromTextField.clear();
+        contextTextField.clear();
+        selectSuppliersComboBox.setValue(null);
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText("Message sent successfully!");
+        alert.show();
     }
+
 
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent) {

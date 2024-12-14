@@ -3,7 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="genarelDashboardAnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.GenarelDashboardController">
+<AnchorPane fx:id="genarelDashboardAnchorPane" prefHeight="495.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.GenarelDashboardController">
    <children>
       <Button layoutX="149.0" layoutY="67.0" mnemonicParsing="false" onAction="#supplyChainButtonOnAction" prefHeight="78.0" prefWidth="321.0" text="Supply Chain Manager" />
       <Button layoutX="157.0" layoutY="200.0" mnemonicParsing="false" onAction="#qualityControlManagerButtonOnAction" prefHeight="78.0" prefWidth="321.0" text="Quality Control Manager" />

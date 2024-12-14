@@ -15,11 +15,11 @@ public class ReviewSupplierContractsController
     @javafx.fxml.FXML
     private TableColumn supplierInformationManagementTableColumn;
     @javafx.fxml.FXML
-    private ComboBox chooseShipplierIdComboBox;
+    private ComboBox<String> chooseShipplierIdComboBox;
     @javafx.fxml.FXML
     private TableColumn contractStartsManagementTableColum;
     @javafx.fxml.FXML
-    private ComboBox paymentTermManagementComboBox;
+    private ComboBox<String> paymentTermManagementComboBox;
     @javafx.fxml.FXML
     private TableColumn contractDurationManagementTableColumn;
     @javafx.fxml.FXML
@@ -29,7 +29,7 @@ public class ReviewSupplierContractsController
     @javafx.fxml.FXML
     private DatePicker EndDateManagementDatePicker;
     @javafx.fxml.FXML
-    private ComboBox terminationClauseManagementComboBox;
+    private ComboBox<String> terminationClauseManagementComboBox;
     @javafx.fxml.FXML
     private TableColumn paymentTermsManagementTableColmn;
     @javafx.fxml.FXML
@@ -47,6 +47,9 @@ public class ReviewSupplierContractsController
 
     @javafx.fxml.FXML
     public void initialize() {
+        chooseShipplierIdComboBox.getItems().addAll("1","2","3","4");
+        terminationClauseManagementComboBox.getItems().addAll("A","B","C","D");
+        paymentTermManagementComboBox.getItems().addAll("M","N","OO","P");
     }
 
     @javafx.fxml.FXML

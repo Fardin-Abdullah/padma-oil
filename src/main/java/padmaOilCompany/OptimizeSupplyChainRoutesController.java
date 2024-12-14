@@ -20,13 +20,13 @@ public class OptimizeSupplyChainRoutesController
     @javafx.fxml.FXML
     private TableColumn extimatedCostOptimizationTableColumn;
     @javafx.fxml.FXML
-    private ComboBox routeFromComboBox;
+    private ComboBox<String> routeFromComboBox;
     @javafx.fxml.FXML
     private TableColumn destinationOptimizationTableColum;
     @javafx.fxml.FXML
     private TableColumn routeToOptimizationTableColumn;
     @javafx.fxml.FXML
-    private DatePicker estimatedTimeOptimizationDatePickef;
+    private DatePicker estimatedTimeOptimizationDatePicker;
     @javafx.fxml.FXML
     private TableColumn estimatedDeliveryOptimizationTableColumn;
     @javafx.fxml.FXML
@@ -34,7 +34,7 @@ public class OptimizeSupplyChainRoutesController
     @javafx.fxml.FXML
     private TableColumn shipmentIdOptimizationTableColm;
     @javafx.fxml.FXML
-    private ComboBox routeToComboBox;
+    private ComboBox<String> routeToComboBox;
     @javafx.fxml.FXML
     private TableColumn routeFromOptimizationTableColumn;
     @javafx.fxml.FXML
@@ -42,6 +42,9 @@ public class OptimizeSupplyChainRoutesController
 
     @javafx.fxml.FXML
     public void initialize() {
+        routeToComboBox.getItems().addAll("a","b","c","d");
+        routeFromComboBox.getItems().addAll("1","2","3","4");
+
     }
 
     @javafx.fxml.FXML

@@ -18,15 +18,15 @@ public class CalibrateQualityTestingEquipmentController
     @javafx.fxml.FXML
     private TextField initialReadingCalibrationTextField;
     @javafx.fxml.FXML
-    private ComboBox eqipmentCalibrationComboBox;
+    private ComboBox<String> eqipmentCalibrationComboBox;
     @javafx.fxml.FXML
     private TextField deviceCalibrationTextField;
     @javafx.fxml.FXML
     private CheckBox prepareEquipment2CheckBox;
     @javafx.fxml.FXML
-    private ComboBox calibrationStanderdsCalibrationComboBox;
+    private ComboBox<String> calibrationStanderdsCalibrationComboBox;
     @javafx.fxml.FXML
-    private ComboBox calibrationCalibrationComboBox;
+    private ComboBox<String> calibrationCalibrationComboBox;
     @javafx.fxml.FXML
     private TextField enterAdjustmentCalibrationTextField;
     @javafx.fxml.FXML
@@ -34,6 +34,10 @@ public class CalibrateQualityTestingEquipmentController
 
     @javafx.fxml.FXML
     public void initialize() {
+        eqipmentCalibrationComboBox.getItems().addAll("A","B","C","D");
+        calibrationCalibrationComboBox.getItems().addAll("E","F","G","H");
+        calibrationStanderdsCalibrationComboBox.getItems().addAll("I","J","Y","X");
+
     }
 
     @javafx.fxml.FXML
@@ -64,7 +68,7 @@ public class CalibrateQualityTestingEquipmentController
     public void backCalibrationButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(CalibrateQualityTestingEquipmentController.class.getResource("/padmaOilCompany/QualityControlManager/QualityControlManagerDashBoard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(CalibrateQualityTestingEquipmentController.class.getResource("/padmaOilCompany/QualityControlManagerDashBoard.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)calibrationSectionAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());

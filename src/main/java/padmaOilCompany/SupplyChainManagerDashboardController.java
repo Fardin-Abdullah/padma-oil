@@ -23,7 +23,7 @@ public class SupplyChainManagerDashboardController
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Supply Chain Reports");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -39,7 +39,7 @@ public class SupplyChainManagerDashboardController
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Handle Delivery Issues");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -55,7 +55,7 @@ public class SupplyChainManagerDashboardController
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Optimize Supply Chain Routes");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -71,7 +71,7 @@ public class SupplyChainManagerDashboardController
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("General Log");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -89,7 +89,7 @@ public class SupplyChainManagerDashboardController
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Manage Inventory Levels");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -105,7 +105,7 @@ public class SupplyChainManagerDashboardController
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Monitor Oil Shipments");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -121,7 +121,7 @@ public class SupplyChainManagerDashboardController
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Review Supplier Contracts");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -137,7 +137,7 @@ public class SupplyChainManagerDashboardController
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Coordinate with Suppliers");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -153,7 +153,7 @@ public class SupplyChainManagerDashboardController
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)supplyChainManagerAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Schedule Deliveries");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {

@@ -25,7 +25,7 @@ public class SupplyChainReportsController
     @javafx.fxml.FXML
     private TableColumn suppliersPerformerChainReportTableColumn;
     @javafx.fxml.FXML
-    private ComboBox selectedReportingPeriodChainReportsComboBox;
+    private ComboBox<String> selectedReportingPeriodChainReportsComboBox;
     @javafx.fxml.FXML
     private TableColumn inventoryLevelsChainReportsTableColumn;
     @javafx.fxml.FXML
@@ -33,6 +33,8 @@ public class SupplyChainReportsController
 
     @javafx.fxml.FXML
     public void initialize() {
+        selectedReportingPeriodChainReportsComboBox.getItems().addAll("A","B","C","D");
+
     }
 
     @Deprecated

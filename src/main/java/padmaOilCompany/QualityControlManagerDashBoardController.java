@@ -19,11 +19,11 @@ public class QualityControlManagerDashBoardController
     public void conductSupplierAuditsButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/ConductSupplierAudits .fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/ConductSupplierAudits .fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Conduct Supplier Audits");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -35,11 +35,11 @@ public class QualityControlManagerDashBoardController
     public void performRandomBatchInspectionButtonOnActio(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/RandomBatchInspection.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/RandomBatchInspection.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle(" Perform Random Batch Inspections");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -55,7 +55,7 @@ public class QualityControlManagerDashBoardController
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("General Log");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -67,11 +67,11 @@ public class QualityControlManagerDashBoardController
     public void ensureProductQualityComplianceButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/EnsureProductQualityCompliance .fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/EnsureProductQualityCompliance .fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Ensure Product Quality Compliance");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -83,11 +83,11 @@ public class QualityControlManagerDashBoardController
     public void reportNonComplaintProductsButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/ReportNon-CompliantProducts.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/ReportNon-CompliantProducts.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Report Non-Compliant Products");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -99,11 +99,11 @@ public class QualityControlManagerDashBoardController
     public void trackQualityMetricsButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/trackQualityMetrics.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/trackQualityMetrics .fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Track Quality Metrics");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -115,11 +115,11 @@ public class QualityControlManagerDashBoardController
     public void calibrateQualityTestingButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/CalibrateQualityTestingEquipment .fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/CalibrateQualityTestingEquipment.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Calibrate Quality Testing Equipment");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -131,11 +131,11 @@ public class QualityControlManagerDashBoardController
     public void reviewProductSpecificationsButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/ReviewProductionSpecifications.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/ReviewProductionSpecifications.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Review Production Specifications");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {
@@ -147,11 +147,11 @@ public class QualityControlManagerDashBoardController
     public void investigateProductComplaintsButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/QualityControlManager/InvestigateProductComplaints.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(QualityControlManagerDashBoardController.class.getResource("/padmaOilCompany/InvestigateProductComplaints.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)qualityControlManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Investigate Product Complaints");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {

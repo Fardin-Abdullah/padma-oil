@@ -22,7 +22,7 @@ public class InvestigateProductComplaintsController
     @javafx.fxml.FXML
     private TextField investigationNameTextField;
     @javafx.fxml.FXML
-    private ComboBox complainIdComplainComboBox;
+    private ComboBox<String> complainIdComplainComboBox;
     @javafx.fxml.FXML
     private TableView complainManagementTableView;
     @javafx.fxml.FXML
@@ -32,6 +32,7 @@ public class InvestigateProductComplaintsController
 
     @javafx.fxml.FXML
     public void initialize() {
+        complainIdComplainComboBox.getItems().addAll("W","Q","E","R");
     }
 
     @javafx.fxml.FXML
@@ -46,7 +47,7 @@ public class InvestigateProductComplaintsController
     public void backComplaintButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(InvestigateProductComplaintsController.class.getResource("/padmaOilCompany/QualityControlManager/QualityControlManagerDashBoard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(InvestigateProductComplaintsController.class.getResource("/padmaOilCompany/QualityControlManagerDashBoard.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)complaintManagementAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());

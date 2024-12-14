@@ -17,7 +17,7 @@ public class HandleDeliveryIssuesController
     @javafx.fxml.FXML
     private TableColumn deliveryStatusIssuesTableColumn;
     @javafx.fxml.FXML
-    private ComboBox issueTypeIssuesComboBox;
+    private ComboBox<String> issueTypeIssuesComboBox;
     @javafx.fxml.FXML
     private TableColumn shipmmentIdIssuesTableColumn;
     @javafx.fxml.FXML
@@ -25,7 +25,7 @@ public class HandleDeliveryIssuesController
     @javafx.fxml.FXML
     private TableColumn scheduledDeliveryTableColumn;
     @javafx.fxml.FXML
-    private ComboBox shipmentIdIssuesComboBox;
+    private ComboBox<String> shipmentIdIssuesComboBox;
     @javafx.fxml.FXML
     private TableColumn destinationIssuesTableColmn;
     @javafx.fxml.FXML
@@ -35,18 +35,35 @@ public class HandleDeliveryIssuesController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        issueTypeIssuesComboBox.getItems().addAll("packaging","Delay","spoiled","wastage");
+        shipmentIdIssuesComboBox.getItems().addAll("2321118","232210","221002","212234");
+
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void jhvyh(Event event) {
     }
-
     @javafx.fxml.FXML
     public void submitIssueResolutionButtonOnAction(ActionEvent actionEvent) {
+        String issueType = issueTypeIssuesComboBox.getValue();
+        String shipmentId = shipmentIdIssuesComboBox.getValue();
+        String description = describtionTextField.getText();
+
+        System.out.println("Submitting issue resolution:");
+        System.out.println("Issue Type: " + issueType);
+        System.out.println("Shipment ID: " + shipmentId);
+        System.out.println("Description: " + description);
+
+        issueTypeIssuesComboBox.setValue(null);
+        shipmentIdIssuesComboBox.setValue(null);
+        describtionTextField.clear();
+
     }
 
     @javafx.fxml.FXML
     public void showDelayDeliiveryButtonOnAction(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML
@@ -57,7 +74,7 @@ public class HandleDeliveryIssuesController
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)reportDeliveryIssuesAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
-            tempStage.setTitle("Manage Accounts Recievable");
+            tempStage.setTitle("Back Button");
             tempStage.setScene(viewscene);
             tempStage.show();
         } catch (Exception e) {

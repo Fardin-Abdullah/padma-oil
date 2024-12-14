@@ -23,7 +23,7 @@ public class EnsureProductQualityComplianceController
     @javafx.fxml.FXML
     private TextField purityQualityTextField;
     @javafx.fxml.FXML
-    private ComboBox productBatchQualityComboBox;
+    private ComboBox<String> productBatchQualityComboBox;
     @javafx.fxml.FXML
     private TableColumn densityProductQualityTableColumn;
     @javafx.fxml.FXML
@@ -45,10 +45,12 @@ public class EnsureProductQualityComplianceController
 
     @javafx.fxml.FXML
     public void initialize() {
+        productBatchQualityComboBox.getItems().addAll("A","B","C","D");
     }
 
     @javafx.fxml.FXML
     public void saveResultQualityButtonOnAction(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML
@@ -63,7 +65,7 @@ public class EnsureProductQualityComplianceController
     public void backQualityButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(EnsureProductQualityComplianceController.class.getResource("/padmaOilCompany/QualityControlManager/QualityControlManagerDashBoard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(EnsureProductQualityComplianceController.class.getResource("/padmaOilCompany/QualityControlManagerDashBoard.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)ensureProductQualityComplianceAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());

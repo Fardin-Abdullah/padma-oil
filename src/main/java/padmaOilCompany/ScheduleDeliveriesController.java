@@ -20,9 +20,9 @@ public class ScheduleDeliveriesController
     @javafx.fxml.FXML
     private TableColumn orderIdScheduleTableColumn;
     @javafx.fxml.FXML
-    private ComboBox selectedDeliveriesScheduleComboBox;
+    private ComboBox<String> selectedDeliveriesScheduleComboBox;
     @javafx.fxml.FXML
-    private ComboBox deliveryMethodScheduleComboBox;
+    private ComboBox<String> deliveryMethodScheduleComboBox;
     @javafx.fxml.FXML
     private TableColumn destinationScheduleTableColumn;
     @javafx.fxml.FXML
@@ -32,6 +32,9 @@ public class ScheduleDeliveriesController
 
     @javafx.fxml.FXML
     public void initialize() {
+
+        deliveryMethodScheduleComboBox.getItems().addAll("A","B","C","D");
+        selectedDeliveriesScheduleComboBox.getItems().addAll("airway","By road");
     }
 
     @javafx.fxml.FXML

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="reportDeliveryIssuesAnchorPane" onMouseClicked="#jhvyh" prefHeight="540.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.HandleDeliveryIssuesController">
+<AnchorPane fx:id="reportDeliveryIssuesAnchorPane" prefHeight="540.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="padmaOilCompany.HandleDeliveryIssuesController">
    <children>
       <Label layoutX="209.0" layoutY="14.0" prefHeight="59.0" prefWidth="268.0" text="Report Delivery Issues.">
          <font>

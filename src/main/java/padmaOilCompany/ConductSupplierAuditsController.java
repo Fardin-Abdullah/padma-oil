@@ -16,7 +16,7 @@ public class ConductSupplierAuditsController
     @javafx.fxml.FXML
     private TableView supplierAuditSectionTableView;
     @javafx.fxml.FXML
-    private ComboBox supplierAuditComboBox;
+    private ComboBox<String> supplierAuditComboBox;
     @javafx.fxml.FXML
     private TableColumn noteAuditTableColumn;
     @javafx.fxml.FXML
@@ -28,7 +28,7 @@ public class ConductSupplierAuditsController
     @javafx.fxml.FXML
     private TextField auditLocationTextField;
     @javafx.fxml.FXML
-    private ComboBox statusAuditComboBox;
+    private ComboBox<String> statusAuditComboBox;
     @javafx.fxml.FXML
     private TableColumn catergoryAuditTableColumn;
     @javafx.fxml.FXML
@@ -38,6 +38,9 @@ public class ConductSupplierAuditsController
 
     @javafx.fxml.FXML
     public void initialize() {
+        statusAuditComboBox.getItems().addAll("1","2","3","4");
+        supplierAuditComboBox.getItems().addAll("5","6","7","8");
+
     }
 
     @javafx.fxml.FXML
@@ -48,7 +51,7 @@ public class ConductSupplierAuditsController
     public void backAuditButtonOnAction(ActionEvent actionEvent) {
         try{
 
-            FXMLLoader fxmlLoader = new FXMLLoader(ConductSupplierAuditsController.class.getResource("/padmaOilCompany/QualityControlManager/QualityControlManagerDashBoard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(ConductSupplierAuditsController.class.getResource("/padmaOilCompany/QualityControlManagerDashBoard.fxml"));
             Scene viewscene = new Scene(fxmlLoader.load());
             Stage tempStage = (Stage)conductSuppliderAuditAnchorPane.getScene().getWindow();
             //Stage tempstage =(Stage)((Node))actionEvent.getSource()).getScene().getWindow());
