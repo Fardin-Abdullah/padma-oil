@@ -5,8 +5,9 @@ import javafx.scene.layout.AnchorPane;
 
 public class SalesManagerDashboardViewController
 {
+
     @javafx.fxml.FXML
-    private AnchorPane salesManagerDashboardViewController;
+    private AnchorPane salesManagerDashboardAnchorPane;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -54,5 +55,10 @@ public class SalesManagerDashboardViewController
 
     @javafx.fxml.FXML
     public void qualifySalesLeadsMenuItemOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+
     }
 }
